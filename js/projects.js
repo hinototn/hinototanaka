@@ -77,7 +77,7 @@ const projects = [
     "imageAlt": "Map of Addison County showing candidate housing development zones hatched pink, schools, stores, and wetlands",
     "color": "#f2eee9",
     "page": "projects/mapping-housing-potential.html",
-    "group": "more",
+    "group": "selected",
     "imageWidth": 1000,
     "imageHeight": 1546
   },
@@ -131,7 +131,7 @@ const projects = [
     "imageAlt": "Middlebury College campus tactile paving survey, with blue symbols for existing accessible infrastructure and red symbols for barriers",
     "color": "#f5f2ee",
     "page": "projects/mapping-the-gaps.html",
-    "group": "selected",
+    "group": "more",
     "imageWidth": 1000,
     "imageHeight": 1000
   },
@@ -149,7 +149,7 @@ const projects = [
     "imageAlt": "Side-by-side maps showing Republican vote percentages under 2021 and AB 604 California congressional districts",
     "color": "#eff0f0",
     "page": "projects/lines-of-power.html",
-    "group": "selected",
+    "group": "more",
     "imageWidth": 1000,
     "imageHeight": 524
   },
