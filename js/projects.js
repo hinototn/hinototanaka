@@ -1,12 +1,27 @@
 /* Content file: update projects here to rearrange the homepage. All project pages are normal static HTML. */
 const site = { email: "htanaka@middlebury.edu", linkedin: "https://www.linkedin.com/in/hinoto-tanaka/" };
 /*
- * TO ADD A PROJECT:
- * 1) Copy one complete { ... } item in the list below.
- * 2) Change its title, image, alt text, and project-page path.
- * 3) Add the matching HTML file under projects/ (or ja/projects/).
- * 4) Update BOTH English and Japanese lists, keeping the same order.
- * The homepage grid updates automatically. See EDITING-GUIDE.md.
+ * HOW THIS LIST WORKS
+ * Each { ... } block is one project card on the homepage.
+ * The fields that show up on the site:
+ *   "title"       – project name under the thumbnail
+ *   "description" – the short line (subtitle) under the title
+ *   "year"        – shown after the subtitle
+ *   "group"       – "selected" puts the card under Selected work,
+ *                   "more" puts it under More work
+ *   "image"       – the 4:3 thumbnail in images/thumbs/
+ *   "imageAlt"    – what the thumbnail shows, for screen readers
+ *   "page"        – the project page the card links to
+ * The other fields (number, slug, categories, color) are notes for you;
+ * the site does not display them.
+ *
+ * TO REORDER: move a whole { ... } block up or down. The order inside
+ * each group follows the order here.
+ * TO ADD A PROJECT: copy a whole block, change its values, add its two
+ * HTML pages (projects/ and ja/projects/). See EDITING-GUIDE.md.
+ * Keep the English (projects.js) and Japanese (projects-ja.js) lists in
+ * the SAME order with the SAME group values.
+ * Don't forget the comma between blocks.
  */
 const projects = [
   {
