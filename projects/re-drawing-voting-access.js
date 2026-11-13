@@ -16,6 +16,9 @@ project({
     en: ["Distance is a quiet barrier to voting, especially for people without a car. I measured how far homes in Richmond, Virginia are from their polling places, then tested what would happen if the polling places moved. Access improved in 40 precincts and got worse in 15, and the average share of homes more than a mile away fell from 22.9% to 21.2%."],
     ja: ["投票所までの距離は、とくに車のない人にとって目立たない壁になる。バージニア州リッチモンドで、住宅から投票所までの距離を測り、投票所を動かしたらどうなるかを試した。40地区で行きやすくなり、15地区で遠くなった。1マイル以上離れた住宅の平均割合は22.9%から21.2%に下がった。"],
   },
+  // The one-line process summary shown above the sections.
+  workflow: [{ en: "Question", ja: "問い" }, { en: "Distance analysis", ja: "距離の分析" }, { en: "Alternative sites", ja: "候補地" }, { en: "Comparison", ja: "比較" }],
+
   sections: [
     {
       heading: { en: "Measuring distance", ja: "距離を測る" },

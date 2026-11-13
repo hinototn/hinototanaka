@@ -29,6 +29,9 @@ project({
     ja: ["コレクティブ（共同生活の住まい）は、住人が一つの家で日々の暮らしを一緒に組み立てる住まい方で、建物の型としてはっきり定義されたことがない。集合住宅もあれば、一軒家も、長屋もある。チームでは、それでも何かパターンがあるのではないかと考え、場所、空間の分け方、住人の顔ぶれから調べた。私の仕事は、データを地図にできる形に整え、地図から正直に言えることを見つけ、わかりやすく見せることだった。いちばんはっきりしたのは、集合住宅のコレクティブは中心部に集まり、一戸建てのコレクティブは郊外へ広がるということだ。"],
   },
 
+  // The one-line process summary shown above the sections.
+  workflow: [{ en: "Research question", ja: "問い" }, { en: "Study area", ja: "調査範囲" }, { en: "Data cleaning", ja: "データ整理" }, { en: "Exploratory maps", ja: "試しの地図" }, { en: "Map series", ja: "地図シリーズ" }, { en: "Poster", ja: "ポスター" }, { en: "Drawings", ja: "絵" }, { en: "Web map", ja: "ウェブ地図" }, { en: "Handoff", ja: "引き継ぎ" }],
+
   sections: [
     {
       heading: { en: "Study area", ja: "調査範囲" },

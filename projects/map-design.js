@@ -17,6 +17,9 @@ project({
     en: ["Jeff Howarth taught me that every choice on a map matters. These two exercises were about learning to see those choices in other cartographers’ work: how a symbol is built, and how type sets up a hierarchy."],
     ja: ["Jeff Howarthからは、地図のどんな選択にも意味があると教わった。この二つの課題は、ほかの地図製作者の作品の中にその選択を見つける練習だった。記号がどう作られているか、文字がどう強弱をつけているか。"],
   },
+  // The one-line process summary shown above the sections.
+  workflow: [{ en: "Symbol recreation", ja: "記号の再現" }, { en: "Type study", ja: "文字の分析" }],
+
   sections: [
     {
       heading: { en: "Symbols and type", ja: "記号と文字" },

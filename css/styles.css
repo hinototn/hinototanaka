@@ -122,6 +122,10 @@ figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top:
 .swatches li { display: flex; align-items: center; gap: 7px; }
 .swatches span { width: 30px; height: 20px; border-radius: 2px; }
 
+/* The one-line process summary under the "about" paragraph. */
+.workflow { font-size: 14px; line-height: 1.7; margin: 22px 0 0 !important; padding: 12px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.workflow span { color: var(--muted); font-size: 12px; margin-right: 12px; }
+
 .sources ul { font-size: 14px; padding-left: 18px; }
 .sources li { margin-bottom: 6px; }
 

@@ -15,6 +15,9 @@ project({
     en: ["I compared Republican vote share in California under the 2021 congressional districts and the proposed AB 604 districts. Nothing about the voters changes between the two maps, only the lines drawn around them."],
     ja: ["カリフォルニア州の2021年の下院選挙区と、AB 604案の区割りで、共和党側の得票率を比べた。二枚の地図で有権者は何も変わらない。変わるのは、その周りに引かれた線だけだ。"],
   },
+  // The one-line process summary shown above the sections.
+  workflow: [{ en: "Data", ja: "データ" }, { en: "Matching classes", ja: "階級をそろえる" }, { en: "Side-by-side maps", ja: "並べた地図" }, { en: "Table", ja: "表" }],
+
   sections: [
     {
       heading: { en: "Comparing the maps", ja: "地図を比べる" },

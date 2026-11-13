@@ -16,6 +16,9 @@ project({
     en: ["Higher rents and mostly White neighborhoods extend north of downtown, while many Black- and Latino-majority tracts to the south and west have lower rents, higher redlining scores and less access to green space. I wanted to see how closely those layers line up, and whether distance from downtown explains them."],
     ja: ["中心部の北には、家賃が高く白人の多い地区が広がる。一方、南部と西部の黒人・ラテン系住民が多い地区では、家賃が低く、レッドライニングの指標が高く、緑地にも行きにくい。これらがどれだけ重なるのか、そして中心からの距離で説明できるのかを確かめたかった。"],
   },
+  // The one-line process summary shown above the sections.
+  workflow: [{ en: "Question", ja: "問い" }, { en: "Census data in R", ja: "Rでのデータ処理" }, { en: "Tract maps", ja: "地区の地図" }, { en: "Urban models", ja: "都市モデル" }],
+
   sections: [
     {
       heading: { en: "Data and method", ja: "データと方法" },

@@ -17,6 +17,9 @@ project({
     en: ["There was no dataset on tactile paving at Middlebury, so we made one on foot. Several crosswalks are missing tactile warnings, and none of the stairs or slopes we surveyed had them."],
     ja: ["ミドルベリーには点字ブロックのデータがなかったので、歩いて作った。いくつもの横断歩道で警告用の点字ブロックが欠けていて、調べた階段や坂道には一つもなかった。"],
   },
+  // The one-line process summary shown above the sections.
+  workflow: [{ en: "Fieldwork", ja: "現地調査" }, { en: "Mapping in QGIS", ja: "QGISで地図化" }, { en: "Symbols", ja: "記号" }],
+
   sections: [
     {
       heading: { en: "Fieldwork and map", ja: "現地調査と地図" },

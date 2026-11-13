@@ -32,6 +32,9 @@ project({
     ja: ["沖縄本島は日本の国土の1%にも満たないが、国内の米軍施設の7割以上がここにある。その広さが一目でわかり、同時に基地の下や周りに何があるのかも見える地図を一枚で作りたかった。展示用の地図なので、少し離れて見ても全体の様子がわかり、近づいた人には四つの場所の話が読めるようにした。"],
   },
 
+  // The one-line process summary shown above the sections.
+  workflow: [{ en: "Personal experience", ja: "体験" }, { en: "Purpose", ja: "目的" }, { en: "Sketches", ja: "スケッチ" }, { en: "Data", ja: "データ" }, { en: "Research", ja: "調査" }, { en: "Inspiration", ja: "着想" }, { en: "Color", ja: "配色" }, { en: "Layout", ja: "レイアウト" }, { en: "Revisions", ja: "修正" }],
+
   sections: [
     {
       heading: { en: "Where it started", ja: "始まり" },

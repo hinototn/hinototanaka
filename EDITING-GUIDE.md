@@ -24,6 +24,7 @@ Open `projects/<id>.js`. Every piece of text has an `en:` and a `ja:` version ne
 - `hero`: the big map at the top
 - `facts`: the short list (Context, Team, Tools, Data). The year is added automatically.
 - `about`: a paragraph or two
+- `workflow`: the one-line process summary (e.g. Sketches → Data → Layout)
 - `sections`: each has a `heading`, `text` (a list of paragraphs) and optional `images`
 - `sources`
 

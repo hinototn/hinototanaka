@@ -15,6 +15,9 @@ project({
     en: ["I mapped the same few square miles of Louisville twice, once as census data and once as streets and buildings, to see how much the subject and scale of a map change the picture of a place."],
     ja: ["ルイビルの同じ数平方マイルを二回地図にした。一回は国勢調査のデータとして、もう一回は道路と建物として。何をどの縮尺で描くかで、場所の見え方がどれだけ変わるかを確かめたかった。"],
   },
+  // The one-line process summary shown above the sections.
+  workflow: [{ en: "Data", ja: "データ" }, { en: "Choropleth", ja: "階級区分図" }, { en: "Street map", ja: "道路の地図" }],
+
   sections: [
     {
       heading: { en: "Two maps", ja: "二枚の地図" },
