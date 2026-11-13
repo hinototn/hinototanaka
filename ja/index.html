@@ -20,18 +20,11 @@
 </header>
 <main class="container home-main" id="main">
 <section class="intro"><h1>地図に映らないもの</h1><p>ミドルベリー大学で地理学を学びながら、地図づくりやGISを使った調査に取り組んでいる。沖縄の米軍基地、コペンハーゲンの共同生活、リッチモンドの投票所への行きやすさなどを地図にしてきた。</p><p>地図で何を見せ、何を省くか。そんな選択に興味がある。連絡は <a href="https://www.linkedin.com/in/hinoto-tanaka/" rel="noopener noreferrer" target="_blank">LinkedIn</a> か <a href="mailto:htanaka@middlebury.edu">メール</a> から。</p></section>
-<div class="work" id="work">
-<!-- 作品カードは js/main.js が js/projects-ja.js から作る。
-     各作品の "group" で、どちらの欄に入るかが決まる。 -->
-<section class="work-group" aria-labelledby="selected-heading">
-<h2 id="selected-heading">主な作品</h2>
-<div class="project-grid" data-group="selected"></div>
+<section class="work" id="work" aria-labelledby="work-heading">
+<!-- 作品カードは js/main.js が js/projects-ja.js から、リストの順に作る。 -->
+<h2 id="work-heading">作品</h2>
+<div class="project-grid" id="project-grid"></div>
 </section>
-<section class="work-group work-more" aria-labelledby="more-heading">
-<h2 id="more-heading">ほかの作品</h2>
-<div class="project-grid" data-group="more"></div>
-</section>
-</div>
 </main>
 <script src="../js/projects-ja.js"></script>
 <script src="../js/main.js"></script>

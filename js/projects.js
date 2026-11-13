@@ -7,20 +7,18 @@ const site = { email: "htanaka@middlebury.edu", linkedin: "https://www.linkedin.
  *   "title"       – project name under the thumbnail
  *   "description" – the short line (subtitle) under the title
  *   "year"        – shown after the subtitle
- *   "group"       – "selected" puts the card under Selected work,
- *                   "more" puts it under More work
  *   "image"       – the 4:3 thumbnail in images/thumbs/
  *   "imageAlt"    – what the thumbnail shows, for screen readers
  *   "page"        – the project page the card links to
  * The other fields (number, slug, categories, color) are notes for you;
  * the site does not display them.
  *
- * TO REORDER: move a whole { ... } block up or down. The order inside
- * each group follows the order here.
+ * TO REORDER: move a whole { ... } block up or down. The homepage shows
+ * the projects in exactly this order, so put the most important first.
  * TO ADD A PROJECT: copy a whole block, change its values, add its two
  * HTML pages (projects/ and ja/projects/). See EDITING-GUIDE.md.
  * Keep the English (projects.js) and Japanese (projects-ja.js) lists in
- * the SAME order with the SAME group values.
+ * the SAME order.
  * Don't forget the comma between blocks.
  */
 const projects = [
@@ -38,9 +36,8 @@ const projects = [
     "imageAlt": "A thematic map of Okinawa with U.S. military installations in red against land-cover and coral-reef classes",
     "color": "#cadfe8",
     "page": "projects/okinawa-twice-colonized.html",
-    "group": "selected",
-    "imageWidth": 1000,
-    "imageHeight": 727
+    "imageWidth": 1200,
+    "imageHeight": 900
   },
   {
     "number": "02",
@@ -56,30 +53,11 @@ const projects = [
     "imageAlt": "The Danish Kollektiver NACIS map, showing housing types across Copenhagen with hand-drawn architectural scenes",
     "color": "#dbe8e5",
     "page": "projects/the-danish-kollektiv.html",
-    "group": "selected",
-    "imageWidth": 1000,
-    "imageHeight": 727
+    "imageWidth": 1200,
+    "imageHeight": 900
   },
   {
     "number": "03",
-    "slug": "green-spaces-by-the-border",
-    "title": "Green Spaces by the Border",
-    "year": "2026",
-    "categories": [
-      "Cartography",
-      "Rural geography"
-    ],
-    "description": "Land Development and Ownership in Pownal, Vermont",
-    "image": "images/thumbs/green-spaces-by-the-border.webp",
-    "imageAlt": "Town of Pownal Vermont green-space and parcel map with roads, forested parcels and a locator globe",
-    "color": "#d5e2ce",
-    "page": "projects/green-spaces-by-the-border.html",
-    "group": "more",
-    "imageWidth": 1000,
-    "imageHeight": 647
-  },
-  {
-    "number": "04",
     "slug": "mapping-housing-potential",
     "title": "Mapping Housing Potential",
     "year": "2026",
@@ -92,12 +70,11 @@ const projects = [
     "imageAlt": "Map of Addison County showing candidate housing development zones hatched pink, schools, stores, and wetlands",
     "color": "#f2eee9",
     "page": "projects/mapping-housing-potential.html",
-    "group": "selected",
-    "imageWidth": 1000,
-    "imageHeight": 1546
+    "imageWidth": 1200,
+    "imageHeight": 900
   },
   {
-    "number": "05",
+    "number": "04",
     "slug": "re-drawing-voting-access",
     "title": "Re-Drawing Voting Access",
     "year": "2025",
@@ -110,12 +87,11 @@ const projects = [
     "imageAlt": "Map of Richmond precincts showing changes in the share of homes more than one mile from a polling station",
     "color": "#eddae1",
     "page": "projects/re-drawing-voting-access.html",
-    "group": "selected",
-    "imageWidth": 1000,
-    "imageHeight": 707
+    "imageWidth": 1200,
+    "imageHeight": 900
   },
   {
-    "number": "06",
+    "number": "05",
     "slug": "redlined-chicago",
     "title": "Redlined Chicago",
     "year": "2025",
@@ -128,9 +104,25 @@ const projects = [
     "imageAlt": "Chicago census tracts shaded by redlining index, with stronger red values across parts of the South and West Sides",
     "color": "#f1dcdb",
     "page": "projects/redlined-chicago.html",
-    "group": "selected",
-    "imageWidth": 984,
-    "imageHeight": 1168
+    "imageWidth": 1200,
+    "imageHeight": 900
+  },
+  {
+    "number": "06",
+    "slug": "green-spaces-by-the-border",
+    "title": "Green Spaces by the Border",
+    "year": "2026",
+    "categories": [
+      "Cartography",
+      "Rural geography"
+    ],
+    "description": "Land Development and Ownership in Pownal, Vermont",
+    "image": "images/thumbs/green-spaces-by-the-border.webp",
+    "imageAlt": "Town of Pownal Vermont green-space and parcel map with roads, forested parcels and a locator globe",
+    "color": "#d5e2ce",
+    "page": "projects/green-spaces-by-the-border.html",
+    "imageWidth": 1200,
+    "imageHeight": 900
   },
   {
     "number": "07",
@@ -146,9 +138,8 @@ const projects = [
     "imageAlt": "Middlebury College campus tactile paving survey, with blue symbols for existing accessible infrastructure and red symbols for barriers",
     "color": "#f5f2ee",
     "page": "projects/mapping-the-gaps.html",
-    "group": "more",
-    "imageWidth": 1000,
-    "imageHeight": 1000
+    "imageWidth": 1200,
+    "imageHeight": 900
   },
   {
     "number": "08",
@@ -164,9 +155,8 @@ const projects = [
     "imageAlt": "Side-by-side maps showing Republican vote percentages under 2021 and AB 604 California congressional districts",
     "color": "#eff0f0",
     "page": "projects/lines-of-power.html",
-    "group": "more",
-    "imageWidth": 1000,
-    "imageHeight": 524
+    "imageWidth": 1200,
+    "imageHeight": 900
   },
   {
     "number": "09",
@@ -182,9 +172,8 @@ const projects = [
     "imageAlt": "Symbol pattern sheet showing twelve vector cartographic symbol recreations and accompanying techniques",
     "color": "#f6f4ef",
     "page": "projects/map-design.html",
-    "group": "more",
-    "imageWidth": 1000,
-    "imageHeight": 647
+    "imageWidth": 1200,
+    "imageHeight": 900
   },
   {
     "number": "10",
@@ -200,8 +189,7 @@ const projects = [
     "imageAlt": "Orange choropleth showing areas with 50 or more housing units in central Louisville",
     "color": "#f8eadc",
     "page": "projects/downtown-derby.html",
-    "group": "more",
-    "imageWidth": 1000,
-    "imageHeight": 749
+    "imageWidth": 1200,
+    "imageHeight": 900
   }
 ];

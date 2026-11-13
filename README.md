@@ -19,6 +19,6 @@ Start with **[EDITING-GUIDE.md](EDITING-GUIDE.md)**. It explains exactly where t
 - `js/projects.js`, `js/projects-ja.js`: homepage gallery information in each language
 - `css/styles.css`: design and layout
 - `images/`: original maps, web-optimized thumbnails, and personal stamp
-- `.nojekyll`: tells GitHub Pages to serve the static site directly
+- `_config.yml`: keeps the notes (`docs/`, `CLAUDE.md`, guides) off the published website
 
 This is a public portfolio: review the email address and personal details in `index.html` and `ja/index.html` before publishing.

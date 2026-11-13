@@ -6,20 +6,18 @@
  *   "title"       – project name under the thumbnail
  *   "description" – the short line (subtitle) under the title
  *   "year"        – shown after the subtitle
- *   "group"       – "selected" puts the card under Selected work,
- *                   "more" puts it under More work
  *   "image"       – the 4:3 thumbnail in images/thumbs/
  *   "imageAlt"    – what the thumbnail shows, for screen readers
  *   "page"        – the project page the card links to
  * The other fields (number, slug, categories, color) are notes for you;
  * the site does not display them.
  *
- * TO REORDER: move a whole { ... } block up or down. The order inside
- * each group follows the order here.
+ * TO REORDER: move a whole { ... } block up or down. The homepage shows
+ * the projects in exactly this order, so put the most important first.
  * TO ADD A PROJECT: copy a whole block, change its values, add its two
  * HTML pages (projects/ and ja/projects/). See EDITING-GUIDE.md.
  * Keep the English (projects.js) and Japanese (projects-ja.js) lists in
- * the SAME order with the SAME group values.
+ * the SAME order.
  * Don't forget the comma between blocks.
  */
 const projects = [
@@ -37,9 +35,8 @@ const projects = [
     "imageAlt": "沖縄の米軍基地をえんじ色で示し、土地利用とサンゴ礁を重ねた地図",
     "color": "#cadfe8",
     "page": "projects/okinawa-twice-colonized.html",
-    "group": "selected",
-    "imageWidth": 1000,
-    "imageHeight": 727
+    "imageWidth": 1200,
+    "imageHeight": 900
   },
   {
     "number": "02",
@@ -55,30 +52,11 @@ const projects = [
     "imageAlt": "コペンハーゲンの共同生活の住まいを、手描きの建物とともに示した地図",
     "color": "#dbe8e5",
     "page": "projects/the-danish-kollektiv.html",
-    "group": "selected",
-    "imageWidth": 1000,
-    "imageHeight": 727
+    "imageWidth": 1200,
+    "imageHeight": 900
   },
   {
     "number": "03",
-    "slug": "green-spaces-by-the-border",
-    "title": "州境に広がる緑",
-    "year": "2026",
-    "categories": [
-      "地図づくり",
-      "地域"
-    ],
-    "description": "バーモント州ポーナルの土地開発と所有",
-    "image": "../images/thumbs/green-spaces-by-the-border.webp",
-    "imageAlt": "バーモント州ポーナルの緑地と土地の区画を示した地図。道路と地球儀の位置図付き",
-    "color": "#d5e2ce",
-    "page": "projects/green-spaces-by-the-border.html",
-    "group": "more",
-    "imageWidth": 1000,
-    "imageHeight": 647
-  },
-  {
-    "number": "04",
     "slug": "mapping-housing-potential",
     "title": "新しい住宅をどこに建てるか",
     "year": "2026",
@@ -91,12 +69,11 @@ const projects = [
     "imageAlt": "アディソン郡の住宅候補地をピンクの斜線で示し、学校、店、湿地を重ねた地図",
     "color": "#f2eee9",
     "page": "projects/mapping-housing-potential.html",
-    "group": "selected",
-    "imageWidth": 1000,
-    "imageHeight": 1546
+    "imageWidth": 1200,
+    "imageHeight": 900
   },
   {
-    "number": "05",
+    "number": "04",
     "slug": "re-drawing-voting-access",
     "title": "投票所への行きやすさを見直す",
     "year": "2025",
@@ -109,12 +86,11 @@ const projects = [
     "imageAlt": "リッチモンドの各地区で、投票所まで1マイル以上ある住宅の割合がどう変わるかを示した地図",
     "color": "#eddae1",
     "page": "projects/re-drawing-voting-access.html",
-    "group": "selected",
-    "imageWidth": 1000,
-    "imageHeight": 707
+    "imageWidth": 1200,
+    "imageHeight": 900
   },
   {
-    "number": "06",
+    "number": "05",
     "slug": "redlined-chicago",
     "title": "シカゴに残るレッドライニングの影",
     "year": "2025",
@@ -127,9 +103,25 @@ const projects = [
     "imageAlt": "シカゴのレッドライニング指標を地区ごとに赤で示した地図",
     "color": "#f1dcdb",
     "page": "projects/redlined-chicago.html",
-    "group": "selected",
-    "imageWidth": 984,
-    "imageHeight": 1168
+    "imageWidth": 1200,
+    "imageHeight": 900
+  },
+  {
+    "number": "06",
+    "slug": "green-spaces-by-the-border",
+    "title": "州境に広がる緑",
+    "year": "2026",
+    "categories": [
+      "地図づくり",
+      "地域"
+    ],
+    "description": "バーモント州ポーナルの土地開発と所有",
+    "image": "../images/thumbs/green-spaces-by-the-border.webp",
+    "imageAlt": "バーモント州ポーナルの緑地と土地の区画を示した地図。道路と地球儀の位置図付き",
+    "color": "#d5e2ce",
+    "page": "projects/green-spaces-by-the-border.html",
+    "imageWidth": 1200,
+    "imageHeight": 900
   },
   {
     "number": "07",
@@ -145,9 +137,8 @@ const projects = [
     "imageAlt": "ミドルベリー大学の点字ブロック調査。青は設置されている場所、赤は足りない場所",
     "color": "#f5f2ee",
     "page": "projects/mapping-the-gaps.html",
-    "group": "more",
-    "imageWidth": 1000,
-    "imageHeight": 1000
+    "imageWidth": 1200,
+    "imageHeight": 900
   },
   {
     "number": "08",
@@ -163,9 +154,8 @@ const projects = [
     "imageAlt": "カリフォルニアの2021年とAB 604案の選挙区で共和党の得票率を比べた地図",
     "color": "#eff0f0",
     "page": "projects/lines-of-power.html",
-    "group": "more",
-    "imageWidth": 1000,
-    "imageHeight": 524
+    "imageWidth": 1200,
+    "imageHeight": 900
   },
   {
     "number": "09",
@@ -181,9 +171,8 @@ const projects = [
     "imageAlt": "12種類の地図記号をベクターで再現し、作り方をまとめたシート",
     "color": "#f6f4ef",
     "page": "projects/map-design.html",
-    "group": "more",
-    "imageWidth": 1000,
-    "imageHeight": 647
+    "imageWidth": 1200,
+    "imageHeight": 900
   },
   {
     "number": "10",
@@ -199,8 +188,7 @@ const projects = [
     "imageAlt": "ルイビル中心部で住宅50戸以上の地区をオレンジ色で示した地図",
     "color": "#f8eadc",
     "page": "projects/downtown-derby.html",
-    "group": "more",
-    "imageWidth": 1000,
-    "imageHeight": 749
+    "imageWidth": 1200,
+    "imageHeight": 900
   }
 ];

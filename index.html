@@ -21,18 +21,11 @@
 </header>
 <main class="container home-main" id="main">
 <section class="intro"><h1>Mapping the Unseen</h1><p>I’m a geography student at Middlebury College working with cartography, GIS, and spatial research. I’ve mapped U.S. military bases in Okinawa, collective housing in Copenhagen, and voting access in Richmond.</p><p>I’m interested in visual storytelling and the choices behind a good map. Feel free to reach out on <a href="https://www.linkedin.com/in/hinoto-tanaka/" rel="noopener noreferrer" target="_blank">LinkedIn</a> or by <a href="mailto:htanaka@middlebury.edu">email</a>.</p></section>
-<div class="work" id="work">
-<!-- The cards are filled in by js/main.js from js/projects.js.
-     Each project's "group" decides which grid it appears in. -->
-<section class="work-group" aria-labelledby="selected-heading">
-<h2 id="selected-heading">Selected work</h2>
-<div class="project-grid" data-group="selected"></div>
+<section class="work" id="work" aria-labelledby="work-heading">
+<!-- The cards are filled in by js/main.js from js/projects.js, in list order. -->
+<h2 id="work-heading">Work</h2>
+<div class="project-grid" id="project-grid"></div>
 </section>
-<section class="work-group work-more" aria-labelledby="more-heading">
-<h2 id="more-heading">More work</h2>
-<div class="project-grid" data-group="more"></div>
-</section>
-</div>
 </main>
 <script src="js/projects.js"></script>
 <script src="js/main.js"></script>

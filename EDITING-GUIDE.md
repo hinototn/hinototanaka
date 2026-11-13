@@ -30,7 +30,7 @@ Repeat in `ja/index.html` if you want the two versions to match.
 
 Open `js/projects.js`. The `projects` list contains one block for each item. Moving a whole `{ ... }` block up or down changes its homepage order. You can change the `title` text without touching the HTML.
 
-The homepage has two sections. `"group": "selected"` puts a card under **Selected work**; `"group": "more"` puts it under **More work**. Each card shows the `title`, the `description` (the short subtitle) and the `year`. The section headings themselves are written in `index.html` and `ja/index.html`.
+The homepage shows the projects in exactly the order of this list, so keep the most important ones at the top. Each card shows the `title`, the `description` (the short subtitle) and the `year`.
 
 For Japanese, make the same change in `js/projects-ja.js`. Both lists should have the same order and project-page paths for their respective languages.
 
@@ -42,7 +42,7 @@ Copy the new map image into `images/projects/` (full-size) or `images/thumbs/` (
 
 Then change the relevant `image: "images/thumbs/filename.webp"` line in **both** `js/projects.js` and `js/projects-ja.js`, and update `imageAlt` to describe the new image.
 
-Homepage thumbnails are cropped to the **same 4:3 shape** so the gallery stays even. The full artwork on the project page isn't cropped. If the thumbnail crops an important feature, adjust the CSS `object-position` for that item in `css/styles.css`, or export a new 4:3 thumbnail intentionally framed around the map.
+Homepage thumbnails should be exported at **1200 × 900 pixels (4:3)** so the gallery stays even. Frame each one on the part of the map that matters. The full artwork on the project page is never cropped.
 
 ## 4. Edit a project page
 
