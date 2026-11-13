@@ -49,10 +49,13 @@ img { max-width: 100%; height: auto; display: block; }
 /* ---------- Header: name, stamp, language toggle ---------- */
 .site-header { border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 23px 0 22px; }
-/* My name and stamp are the biggest thing in the header, and link to my About page. */
+/* My name and stamp are the biggest thing in the header. */
 .site-name { display: inline-flex; align-items: center; gap: 12px; font-size: 30px; letter-spacing: -.01em; text-decoration: none; line-height: 1; }
-.site-name img { width: 58px; height: 58px; transition: transform .2s; }
-.site-name:hover img { transform: rotate(-6deg); }
+.site-name a { text-decoration: none; }
+.site-name > a:first-child:hover { color: var(--accent); }
+/* My name goes to the homepage; my stamp goes to my About page. */
+.stamp-link img { width: 58px; height: 58px; transition: transform .2s; }
+.stamp-link:hover img, .stamp-link:focus img { transform: rotate(-6deg); }
 .lang-switch { display: flex; align-items: center; gap: 10px; font-size: 13px; }
 .lang-switch a { color: var(--muted); text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; }
 .lang-switch a[aria-current="page"], .lang-switch a:hover { color: var(--accent); border-bottom-color: var(--accent); }
