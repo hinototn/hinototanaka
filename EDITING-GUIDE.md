@@ -5,7 +5,7 @@ Plain HTML, CSS and a little JavaScript. No build step: I edit a file on GitHub,
 ```
 index.html             English homepage (intro text lives here)
 ja/index.html          Japanese homepage
-about.html             About page (my name and stamp in the header link here)
+about.html             About page (only my stamp in the header links here)
 ja/about.html          Japanese About page
 project.html           English project page: one template for every project
 ja/project.html        Japanese project page: same template
@@ -44,7 +44,7 @@ The project's address is `project.html?id=my-new-map`.
 At the top of `css/styles.css`. English uses Helvetica Neue; Japanese uses Noto Sans JP, loaded in each page's `<head>`.
 
 ## The header
-My name and stamp are written in each page's `<header>` (index, project, about, in both languages) and link to the About page. If I change them, I change all six.
+My name and stamp are written in each page's `<header>` (index, project, about, in both languages). My name links to the homepage; my stamp is the only link to my About page. If I change the header, I change all six.
 
 ## If something breaks
 - Blank project page: a missing comma or quote in `projects/<id>.js`, or the `id` in `js/projects.js` doesn't match the file name.
