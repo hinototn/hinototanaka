@@ -83,3 +83,65 @@ h1 { font-size: clamp(27px, 3.2vw, 34px); font-weight: 700; letter-spacing: -.02
 /* Card subtitles: even line lengths; in Japanese, break between phrases, not mid-word. */
 .project h3, .project-subtitle { text-wrap: balance; }
 :lang(ja) .project h3, :lang(ja) .project-subtitle { word-break: auto-phrase; }
+
+/* ============================================================
+   CASE-STUDY PROJECT PAGES (Okinawa, Kollektiv, …)
+   Part 1 "At a glance" + Part 2 "Behind the map".
+   Text sits in a centered reading column; figures can be wider.
+   ============================================================ */
+.case .prose { max-width: 700px; margin-inline: auto; }
+.case .prose p { margin: 0 0 16px; }
+.case .prose a { color: var(--accent); text-underline-offset: 3px; }
+.case-part { margin-top: 64px; }
+.part-label { font-size: 13px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--accent); text-align: center; margin: 0 0 26px; }
+:lang(ja) .part-label { letter-spacing: .02em; text-transform: none; }
+
+/* Quick facts: grey labels on the left, details on the right. */
+.facts { display: grid; grid-template-columns: 8.5em minmax(0, 1fr); gap: 9px 20px; margin: 0 0 30px; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.facts dt { font-size: 13px; color: var(--muted); padding-top: 2px; }
+.facts dd { margin: 0; font-size: 15px; line-height: 1.5; }
+
+/* "How it was made": numbered links to each step below. */
+.workflow-title { font-size: 15px; margin: 28px 0 10px; }
+.workflow { list-style: none; padding: 0; margin: 0; counter-reset: step; columns: 2; column-gap: 28px; }
+.workflow li { counter-increment: step; break-inside: avoid; margin: 0 0 6px; font-size: 15px; }
+.workflow li::before { content: counter(step, decimal-leading-zero); color: var(--accent); font-size: 12px; font-weight: 700; margin-right: 8px; }
+.workflow a { text-decoration: none; }
+.workflow a:hover { color: var(--accent); text-decoration: underline; }
+
+/* One step of the process. */
+.step { margin-top: 60px; scroll-margin-top: 20px; }
+.step-num { display: block; font-size: 12px; font-weight: 700; color: var(--accent); letter-spacing: .05em; margin-bottom: 4px; }
+.step h3 { font-size: 21px; line-height: 1.25; margin: 0 0 14px; }
+.case figure { margin: 26px 0 0; }
+.case figure img { display: block; height: auto; }
+.case figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top: 9px; max-width: 700px; }
+.fig-full img { width: 100%; }
+.fig-pair { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px; margin-top: 26px; }
+.fig-pair figure { margin: 0; }
+.fig-pair img { width: 100%; }
+.fig-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; margin-top: 26px; }
+.fig-grid figure { margin: 0; }
+.fig-grid img { width: 100%; }
+/* A close-up: shown at its own size (never stretched), centered. */
+.fig-detail { text-align: center; }
+.fig-detail img { width: auto; max-width: 100%; margin-inline: auto; border: 1px solid var(--line); }
+.fig-detail figcaption { margin-inline: auto; }
+
+/* Colour chips built in HTML, so they stay sharp and editable. */
+.swatches { display: flex; flex-wrap: wrap; gap: 14px 18px; list-style: none; padding: 0; margin: 22px 0 0; }
+.swatches li { display: flex; align-items: center; gap: 8px; font-size: 13px; }
+.swatches span { width: 34px; height: 22px; border-radius: 2px; flex: none; }
+
+.credits { font-size: 14px; padding-left: 18px; margin: 0; }
+.credits li { margin-bottom: 6px; }
+.offline-note { font-size: 13px; color: var(--muted); }
+
+@media (max-width: 640px) {
+  .facts { grid-template-columns: 1fr; gap: 2px; }
+  .facts dd { margin-bottom: 10px; }
+  .workflow { columns: 1; }
+  .fig-pair, .fig-grid { grid-template-columns: 1fr; }
+}
+@media (min-width: 641px) and (max-width: 900px) { .fig-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+:lang(ja) .case .prose, :lang(ja) .facts dd { line-height: 1.85; }
