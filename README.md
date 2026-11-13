@@ -4,7 +4,7 @@ A small, bilingual cartography portfolio. Built with HTML, CSS and JavaScript. N
 
 ## View locally
 
-Double-click `index.html`. Click **日本語** in the header to see the Japanese version. Both language editions and all project images are included; the Kollektiv interactive atlas is an external link and requires internet access.
+Run `python3 -m http.server` in this folder and open http://localhost:8000 (project pages load their content with JavaScript, so opening the file directly may not work). Click **日本語** in the header to see the Japanese version. Both language editions and all project images are included; the Kollektiv interactive atlas is an external link and requires internet access.
 
 ## New to code?
 
@@ -12,13 +12,6 @@ Start with **[EDITING-GUIDE.md](EDITING-GUIDE.md)**. It explains exactly where t
 
 ## Pages and folders
 
-- `index.html`: English home
-- `ja/index.html`: Japanese home
-- `projects/`: English project pages
-- `ja/projects/`: Japanese project pages
-- `js/projects.js`, `js/projects-ja.js`: homepage gallery information in each language
-- `css/styles.css`: design and layout
-- `images/`: original maps, web-optimized thumbnails, and personal stamp
-- `_config.yml`: keeps the notes (`docs/`, `CLAUDE.md`, guides) off the published website
+See **[EDITING-GUIDE.md](EDITING-GUIDE.md)** for how the site is organized and how to edit it.
 
 This is a public portfolio: review the email address and personal details in `index.html` and `ja/index.html` before publishing.

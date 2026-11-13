@@ -1,195 +1,95 @@
-/* Content file: update projects here to rearrange the homepage. All project pages are normal static HTML. */
-const site = { email: "htanaka@middlebury.edu", linkedin: "https://www.linkedin.com/in/hinoto-tanaka/" };
-/*
- * HOW THIS LIST WORKS
- * Each { ... } block is one project card on the homepage.
- * The fields that show up on the site:
- *   "title"       – project name under the thumbnail
- *   "description" – the short line (subtitle) under the title
- *   "year"        – shown after the subtitle
- *   "image"       – the 4:3 thumbnail in images/thumbs/
- *   "imageAlt"    – what the thumbnail shows, for screen readers
- *   "page"        – the project page the card links to
- * The other fields (number, slug, categories, color) are notes for you;
- * the site does not display them.
- *
- * TO REORDER: move a whole { ... } block up or down. The homepage shows
- * the projects in exactly this order, so put the most important first.
- * TO ADD A PROJECT: copy a whole block, change its values, add its two
- * HTML pages (projects/ and ja/projects/). See EDITING-GUIDE.md.
- * Keep the English (projects.js) and Japanese (projects-ja.js) lists in
- * the SAME order.
- * Don't forget the comma between blocks.
- */
+// MY PROJECT LIST
+// This is the one place where the homepage gets its cards, and where each
+// project page gets its title. The order here is the order on the homepage,
+// so I keep the most important projects at the top.
+//
+// Each project has:
+//   id        – the name of its content file in projects/ (projects/<id>.js)
+//   year      – shown under the subtitle
+//   thumb     – the 4:3 homepage thumbnail in images/thumbs/ (1200 × 900)
+//   title, subtitle, thumbAlt – English and Japanese side by side
+//
+// To add a project: copy one { … } block, change it, and make projects/<id>.js.
+
 const projects = [
   {
-    "number": "01",
-    "slug": "okinawa-twice-colonized",
-    "title": "Okinawa, Twice Colonized",
-    "year": "2025",
-    "categories": [
-      "Cartography",
-      "Environmental storytelling"
-    ],
-    "description": "The Lasting Scars of U.S. Militarization in Okinawa, Japan",
-    "image": "images/thumbs/okinawa-twice-colonized.webp",
-    "imageAlt": "A thematic map of Okinawa with U.S. military installations in red against land-cover and coral-reef classes",
-    "color": "#cadfe8",
-    "page": "projects/okinawa-twice-colonized.html",
-    "imageWidth": 1200,
-    "imageHeight": 900
+    id: "okinawa-twice-colonized",
+    year: "2025",
+    thumb: "okinawa-twice-colonized.webp",
+    title:    { en: "Okinawa, Twice Colonized", ja: "沖縄・支配下に置かれている島" },
+    subtitle: { en: "The Lasting Scars of U.S. Militarization in Okinawa, Japan", ja: "沖縄に残る米軍基地の傷あと" },
+    thumbAlt: { en: "A thematic map of Okinawa with U.S. military installations in red against land-cover and coral-reef classes", ja: "沖縄の米軍基地をえんじ色で示し、土地利用とサンゴ礁を重ねた地図" },
   },
   {
-    "number": "02",
-    "slug": "the-danish-kollektiv",
-    "title": "The Danish Kollektiv",
-    "year": "2026",
-    "categories": [
-      "Research",
-      "Cartography"
-    ],
-    "description": "Spatial Patterns of Kollektiver in Copenhagen, Denmark",
-    "image": "images/thumbs/the-danish-kollektiv.webp",
-    "imageAlt": "The Danish Kollektiver NACIS map, showing housing types across Copenhagen with hand-drawn architectural scenes",
-    "color": "#dbe8e5",
-    "page": "projects/the-danish-kollektiv.html",
-    "imageWidth": 1200,
-    "imageHeight": 900
+    id: "the-danish-kollektiv",
+    year: "2026",
+    thumb: "the-danish-kollektiv.webp",
+    title:    { en: "The Danish Kollektiv", ja: "デンマークのコレクティブ" },
+    subtitle: { en: "Spatial Patterns of Kollektiver in Copenhagen, Denmark", ja: "コペンハーゲンのどこにコレクティブがあるか" },
+    thumbAlt: { en: "The Danish Kollektiver NACIS map, showing housing types across Copenhagen with hand-drawn architectural scenes", ja: "コペンハーゲンの共同生活の住まいを、手描きの建物とともに示した地図" },
   },
   {
-    "number": "03",
-    "slug": "mapping-housing-potential",
-    "title": "Mapping Housing Potential",
-    "year": "2026",
-    "categories": [
-      "GIS",
-      "Planning"
-    ],
-    "description": "Identifying Potential Housing Development Zones in Addison County, Vermont",
-    "image": "images/thumbs/mapping-housing-potential.webp",
-    "imageAlt": "Map of Addison County showing candidate housing development zones hatched pink, schools, stores, and wetlands",
-    "color": "#f2eee9",
-    "page": "projects/mapping-housing-potential.html",
-    "imageWidth": 1200,
-    "imageHeight": 900
+    id: "mapping-housing-potential",
+    year: "2026",
+    thumb: "mapping-housing-potential.webp",
+    title:    { en: "Mapping Housing Potential", ja: "新しい住宅をどこに建てるか" },
+    subtitle: { en: "Identifying Potential Housing Development Zones in Addison County, Vermont", ja: "バーモント州アディソン郡で、住宅を建てられそうな場所を探す" },
+    thumbAlt: { en: "Map of Addison County showing candidate housing development zones hatched pink, schools, stores, and wetlands", ja: "アディソン郡の住宅候補地をピンクの斜線で示し、学校、店、湿地を重ねた地図" },
   },
   {
-    "number": "04",
-    "slug": "re-drawing-voting-access",
-    "title": "Re-Drawing Voting Access",
-    "year": "2025",
-    "categories": [
-      "GIS",
-      "Civic geography"
-    ],
-    "description": "Polling-Place Walkability and Voting Access in Richmond, Virginia",
-    "image": "images/thumbs/re-drawing-voting-access.webp",
-    "imageAlt": "Map of Richmond precincts showing changes in the share of homes more than one mile from a polling station",
-    "color": "#eddae1",
-    "page": "projects/re-drawing-voting-access.html",
-    "imageWidth": 1200,
-    "imageHeight": 900
+    id: "re-drawing-voting-access",
+    year: "2025",
+    thumb: "re-drawing-voting-access.webp",
+    title:    { en: "Re-Drawing Voting Access", ja: "投票所への行きやすさを見直す" },
+    subtitle: { en: "Polling-Place Walkability and Voting Access in Richmond, Virginia", ja: "バージニア州リッチモンドで、投票所まで歩いて行けるか" },
+    thumbAlt: { en: "Map of Richmond precincts showing changes in the share of homes more than one mile from a polling station", ja: "リッチモンドの各地区で、投票所まで1マイル以上ある住宅の割合がどう変わるかを示した地図" },
   },
   {
-    "number": "05",
-    "slug": "redlined-chicago",
-    "title": "Redlined Chicago",
-    "year": "2025",
-    "categories": [
-      "GIS",
-      "Urban geography"
-    ],
-    "description": "Race, Redlining, Housing, and Green-Space Access in Chicago, Illinois",
-    "image": "images/thumbs/redlined-chicago.webp",
-    "imageAlt": "Chicago census tracts shaded by redlining index, with stronger red values across parts of the South and West Sides",
-    "color": "#f1dcdb",
-    "page": "projects/redlined-chicago.html",
-    "imageWidth": 1200,
-    "imageHeight": 900
+    id: "redlined-chicago",
+    year: "2025",
+    thumb: "redlined-chicago.webp",
+    title:    { en: "Redlined Chicago", ja: "シカゴに残るレッドライニングの影" },
+    subtitle: { en: "Race, Redlining, Housing, and Green-Space Access in Chicago, Illinois", ja: "シカゴの人種、レッドライニング、住宅、緑地への行きやすさ" },
+    thumbAlt: { en: "Chicago census tracts shaded by redlining index, with stronger red values across parts of the South and West Sides", ja: "シカゴのレッドライニング指標を地区ごとに赤で示した地図" },
   },
   {
-    "number": "06",
-    "slug": "green-spaces-by-the-border",
-    "title": "Green Spaces by the Border",
-    "year": "2026",
-    "categories": [
-      "Cartography",
-      "Rural geography"
-    ],
-    "description": "Land Development and Ownership in Pownal, Vermont",
-    "image": "images/thumbs/green-spaces-by-the-border.webp",
-    "imageAlt": "Town of Pownal Vermont green-space and parcel map with roads, forested parcels and a locator globe",
-    "color": "#d5e2ce",
-    "page": "projects/green-spaces-by-the-border.html",
-    "imageWidth": 1200,
-    "imageHeight": 900
+    id: "green-spaces-by-the-border",
+    year: "2026",
+    thumb: "green-spaces-by-the-border.webp",
+    title:    { en: "Green Spaces by the Border", ja: "州境に広がる緑" },
+    subtitle: { en: "Land Development and Ownership in Pownal, Vermont", ja: "バーモント州ポーナルの土地開発と所有" },
+    thumbAlt: { en: "Town of Pownal Vermont green-space and parcel map with roads, forested parcels and a locator globe", ja: "バーモント州ポーナルの緑地と土地の区画を示した地図。道路と地球儀の位置図付き" },
   },
   {
-    "number": "07",
-    "slug": "mapping-the-gaps",
-    "title": "Mapping the Gaps",
-    "year": "2025",
-    "categories": [
-      "Field survey",
-      "Accessibility"
-    ],
-    "description": "Tactile Paving and Pedestrian Accessibility at Middlebury College, Vermont",
-    "image": "images/thumbs/mapping-the-gaps.webp",
-    "imageAlt": "Middlebury College campus tactile paving survey, with blue symbols for existing accessible infrastructure and red symbols for barriers",
-    "color": "#f5f2ee",
-    "page": "projects/mapping-the-gaps.html",
-    "imageWidth": 1200,
-    "imageHeight": 900
+    id: "mapping-the-gaps",
+    year: "2025",
+    thumb: "mapping-the-gaps.webp",
+    title:    { en: "Mapping the Gaps", ja: "点字ブロックの足りない場所" },
+    subtitle: { en: "Tactile Paving and Pedestrian Accessibility at Middlebury College, Vermont", ja: "ミドルベリー大学の点字ブロックと歩きやすさ" },
+    thumbAlt: { en: "Middlebury College campus tactile paving survey, with blue symbols for existing accessible infrastructure and red symbols for barriers", ja: "ミドルベリー大学の点字ブロック調査。青は設置されている場所、赤は足りない場所" },
   },
   {
-    "number": "08",
-    "slug": "lines-of-power",
-    "title": "Lines of Power",
-    "year": "2026",
-    "categories": [
-      "Political geography",
-      "GIS"
-    ],
-    "description": "Gerrymandering and Congressional Redistricting in California",
-    "image": "images/thumbs/lines-of-power.webp",
-    "imageAlt": "Side-by-side maps showing Republican vote percentages under 2021 and AB 604 California congressional districts",
-    "color": "#eff0f0",
-    "page": "projects/lines-of-power.html",
-    "imageWidth": 1200,
-    "imageHeight": 900
+    id: "lines-of-power",
+    year: "2026",
+    thumb: "lines-of-power.webp",
+    title:    { en: "Lines of Power", ja: "選挙区の線が変えるもの" },
+    subtitle: { en: "Gerrymandering and Congressional Redistricting in California", ja: "カリフォルニア州の選挙区割りとゲリマンダー" },
+    thumbAlt: { en: "Side-by-side maps showing Republican vote percentages under 2021 and AB 604 California congressional districts", ja: "カリフォルニアの2021年とAB 604案の選挙区で共和党の得票率を比べた地図" },
   },
   {
-    "number": "09",
-    "slug": "map-design",
-    "title": "Cartographic Studies",
-    "year": "2025",
-    "categories": [
-      "Design",
-      "Typography"
-    ],
-    "description": "Cartographic Symbolization and Typography Studies",
-    "image": "images/thumbs/map-design.webp",
-    "imageAlt": "Symbol pattern sheet showing twelve vector cartographic symbol recreations and accompanying techniques",
-    "color": "#f6f4ef",
-    "page": "projects/map-design.html",
-    "imageWidth": 1200,
-    "imageHeight": 900
+    id: "map-design",
+    year: "2025",
+    thumb: "map-design.webp",
+    title:    { en: "Cartographic Studies", ja: "地図表現の練習" },
+    subtitle: { en: "Cartographic Symbolization and Typography Studies", ja: "地図記号と文字の使い方の練習" },
+    thumbAlt: { en: "Symbol pattern sheet showing twelve vector cartographic symbol recreations and accompanying techniques", ja: "12種類の地図記号をベクターで再現し、作り方をまとめたシート" },
   },
   {
-    "number": "10",
-    "slug": "downtown-derby",
-    "title": "Downtown Derby",
-    "year": "2026",
-    "categories": [
-      "GIS",
-      "Urban geography"
-    ],
-    "description": "Urban Geography and Spatial Analysis in Louisville, Kentucky",
-    "image": "images/thumbs/downtown-derby.webp",
-    "imageAlt": "Orange choropleth showing areas with 50 or more housing units in central Louisville",
-    "color": "#f8eadc",
-    "page": "projects/downtown-derby.html",
-    "imageWidth": 1200,
-    "imageHeight": 900
-  }
+    id: "downtown-derby",
+    year: "2026",
+    thumb: "downtown-derby.webp",
+    title:    { en: "Downtown Derby", ja: "ダウンタウン・ダービー" },
+    subtitle: { en: "Urban Geography and Spatial Analysis in Louisville, Kentucky", ja: "ケンタッキー州ルイビルの都市地理と空間分析" },
+    thumbAlt: { en: "Orange choropleth showing areas with 50 or more housing units in central Louisville", ja: "ルイビル中心部で住宅50戸以上の地区をオレンジ色で示した地図" },
+  },
 ];
