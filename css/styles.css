@@ -53,9 +53,6 @@ img { max-width: 100%; height: auto; display: block; }
 .site-name { display: inline-flex; align-items: center; gap: 12px; font-size: 30px; letter-spacing: -.01em; text-decoration: none; line-height: 1; }
 .site-name img { width: 58px; height: 58px; transition: transform .2s; }
 .site-name:hover img { transform: rotate(-6deg); }
-.site-nav { display: flex; align-items: center; gap: 18px; font-size: 13px; }
-.site-nav a { color: var(--muted); text-decoration: none; }
-.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--accent); }
 .lang-switch { display: flex; align-items: center; gap: 10px; font-size: 13px; }
 .lang-switch a { color: var(--muted); text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; }
 .lang-switch a[aria-current="page"], .lang-switch a:hover { color: var(--accent); border-bottom-color: var(--accent); }
@@ -128,7 +125,10 @@ figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top:
 .sources li { margin-bottom: 6px; }
 
 /* ---------- About page ---------- */
-.about { display: grid; grid-template-columns: 240px 1fr; gap: 56px; align-items: start; max-width: 900px; margin: 0 auto; padding: 60px 0 90px; }
+/* A band of my stamp. images/stamp-tile.png holds two stamps, staggered, so it repeats like brickwork. */
+.about-page { padding-top: 45px; }
+.stamp-tiles { height: 140px; opacity: .6; background: url("../images/stamp-tile.png") 0 0 / 140px repeat; }
+.about { display: grid; grid-template-columns: 240px 1fr; gap: 56px; align-items: start; max-width: 900px; margin: 0 auto; padding: 40px 0 90px; }
 .about-stamp { margin: 0; text-align: center; }
 .about-stamp img { width: 100%; }
 .about-stamp figcaption { font-size: 15px; color: var(--ink); margin-top: 12px; }

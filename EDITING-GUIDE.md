@@ -43,7 +43,7 @@ The project's address is `project.html?id=my-new-map`.
 At the top of `css/styles.css`. English uses Helvetica Neue; Japanese uses Noto Sans JP, loaded in each page's `<head>`.
 
 ## The header
-My name, stamp and the Work / About links are written in each page's `<header>` (index, project, about, in both languages). If I change them, I change all six.
+My name and stamp are written in each page's `<header>` (index, project, about, in both languages) and link to the About page. If I change them, I change all six.
 
 ## If something breaks
 - Blank project page: a missing comma or quote in `projects/<id>.js`, or the `id` in `js/projects.js` doesn't match the file name.
