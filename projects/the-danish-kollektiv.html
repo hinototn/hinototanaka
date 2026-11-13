@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"/>
+<meta content="Where do people live collectively in Copenhagen, and in what kinds of homes? GIS, data work and cartography for a research project on Danish kollektiver." name="description"/>
 <meta content="width=device-width, initial-scale=1" name="viewport"/>
 <meta content="#fbfaf8" name="theme-color"/>
-<meta content="Where do people live collectively in Copenhagen? And what kinds of homes do they share?" name="description"/>
 <title>The Danish Kollektiv — Hinoto Tanaka</title>
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -16,36 +16,228 @@
 <header class="site-header">
 <div class="container header-inner">
 <a class="site-name" href="../index.html"><span>Hinoto Tanaka</span><img alt="" aria-hidden="true" height="40" src="../images/hinoto-stamp.png" width="40"/></a>
-
 <nav aria-label="Language" class="lang-switch"><a aria-current="page" href="the-danish-kollektiv.html" hreflang="en" lang="en">EN</a><span aria-hidden="true" class="lang-divider">/</span><a href="../ja/projects/the-danish-kollektiv.html" hreflang="ja" lang="ja">日本語</a></nav></div>
 </header>
-<main class="container project-page" id="main">
+<main class="container project-page case" id="main">
 <p class="back"><a href="../index.html#work">← Work</a></p>
 <h1>The Danish Kollektiv</h1>
-<p class="project-intro">Where do people live collectively in Copenhagen? And what kinds of homes do they share?</p>
+<p class="project-intro">Where do people live collectively in Copenhagen, and in what kinds of homes?</p>
+
+<!-- FINAL WORK -->
 <div class="project-hero"><figure class="map-main">
-<a aria-label="Open full-size image: The Danish Kollektiver NACIS map, showing housing types across Copenhagen with hand-drawn architectural scenes." href="../images/projects/kollektiv-poster.webp" rel="noopener noreferrer" target="_blank"><img alt="The Danish Kollektiver NACIS map, showing housing types across Copenhagen with hand-drawn architectural scenes." height="1488" loading="lazy" src="../images/projects/kollektiv-poster.webp" width="2048"/></a>
-<figcaption>The Danish Kollektiv — final map</figcaption>
+<a href="../images/projects/kollektiv-poster.webp" target="_blank" rel="noopener noreferrer"><img alt="The Danish Kollektiver poster: a map of Copenhagen with kollektiver marked by housing type (apartment, detached house, row house) over a quiet basemap with the city's vulnerable areas in pink, framed by drawings of a kollektiv interior and Christiania." height="1488" src="../images/projects/kollektiv-poster.webp" width="2048"/></a>
+<figcaption>The Danish Kollektiver, NACIS 2026 poster. Click to open full size.</figcaption>
 </figure></div>
-<div class="project-writing"><p>During my semester in Copenhagen, I worked with a research team surveying Danish kollektiver. We received 125 responses and mapped 108 locations in the Copenhagen urban area.</p><p>Apartments were more common in the city center, while detached houses tended to be farther out. I made this map for NACIS 2026 to show that collective living does not have one architectural form.</p><p>The exploratory maps below look at housing types, shared spaces, when the kollektiver were established, and living space per person. You can also explore the locations in the interactive map.</p></div>
-<p class="interactive-link"><a href="https://hinototn.github.io/kollektiv-denmark-interactive-map/#7/55.898/12.117" rel="noopener noreferrer" target="_blank">Explore the interactive Kollektiv map ↗</a></p>
-<section class="additional-maps"><h2>More maps</h2><div class="gallery-grid"><figure class="map-secondary">
-<a aria-label="Open full-size image: Housing type and spatial clusters" href="../images/projects/kollektiv-types.webp" rel="noopener noreferrer" target="_blank"><img alt="Housing type and spatial clusters" height="1535" loading="lazy" src="../images/projects/kollektiv-types.webp" width="2048"/></a>
-<figcaption>Housing type and spatial clusters</figcaption>
-</figure><figure class="map-secondary">
-<a aria-label="Open full-size image: Workshop and garden presence" href="../images/projects/kollektiv-workshop-garden.webp" rel="noopener noreferrer" target="_blank"><img alt="Workshop and garden presence" height="1535" loading="lazy" src="../images/projects/kollektiv-workshop-garden.webp" width="2048"/></a>
-<figcaption>Workshop and garden presence</figcaption>
-</figure><figure class="map-secondary">
-<a aria-label="Open full-size image: Establishment period" href="../images/projects/kollektiv-establishment.webp" rel="noopener noreferrer" target="_blank"><img alt="Establishment period" height="1535" loading="lazy" src="../images/projects/kollektiv-establishment.webp" width="2048"/></a>
-<figcaption>Establishment period</figcaption>
-</figure><figure class="map-secondary">
-<a aria-label="Open full-size image: Living space per resident and kollektiv area" href="../images/projects/kollektiv-living-space.webp" rel="noopener noreferrer" target="_blank"><img alt="Living space per resident and kollektiv area" height="1535" loading="lazy" src="../images/projects/kollektiv-living-space.webp" width="2048"/></a>
-<figcaption>Living space per resident and kollektiv area</figcaption>
-</figure></div></section>
+
+<!-- ======================= PART 1 · AT A GLANCE ======================= -->
+<section class="case-part" aria-labelledby="glance">
+<h2 class="part-label" id="glance">At a glance</h2>
+<div class="prose">
+<!-- EDIT: the facts list. Each line is a <dt> (label) and a <dd> (details). -->
+<dl class="facts">
+<dt>Context</dt><dd><em>Living kollektiv – Cartographies of the Nordic Residential Commune in Copenhagen</em>, a research project at DIS Copenhagen, Spring 2026. The map work continued as a poster for NACIS 2026 in Milwaukee and a national interactive map for ICSA 2026.</dd>
+<dt>Team</dt><dd>Supervised by Dr. Heitor Garcia Lantarón and Dr. Rodrigo Antonio Rieiro Diaz. Student researchers Parmida E., Eva Y., Chloe W. and me, with Kollektivforeningen, the Danish Association of Kollektiver.</dd>
+<dt>My part</dt><dd>Data cleaning and joins, geocoding, spatial analysis, thematic maps, the interactive map, GIS documentation and the NACIS poster. The survey and wider research were shared work.</dd>
+<dt>Tools</dt><dd>Excel, QGIS, Adobe Illustrator, qgis2web / Leaflet, GitHub Pages</dd>
+<dt>Data</dt><dd>Survey: 125 responses in the Copenhagen Urban Area (10 Feb – 4 Mar 2026) · Location dataset: 108 kollektiver · Municipal boundaries: DigDag via Dataforsyningen</dd>
+<dt>Skills</dt><dd>Data cleaning, joining without a key, GIS troubleshooting, exploratory mapping, multivariate symbols, basemap design, web mapping, documentation</dd>
+</dl>
+<p>Nobody has pinned down what a Danish kollektiv is as a building. Some are flats, some are villas, some are row houses. Our team set out to see whether there is a pattern anyway. My job was to make the data mappable, find out what the maps could honestly say, and then say it clearly. The clearest answer: apartment kollektiver cluster in the city core; detached-house kollektiver spread toward the edge.</p>
+<h3 class="workflow-title">How it was made</h3>
+<ol class="workflow">
+<li><a href="#step-1">A housing type nobody has defined</a></li>
+<li><a href="#step-2">Where does Copenhagen end?</a></li>
+<li><a href="#step-3">First, fix the file</a></li>
+<li><a href="#step-4">Two datasets, no shared ID</a></li>
+<li><a href="#step-5">Ten maps to find one pattern</a></li>
+<li><a href="#step-6">Four maps, four jobs</a></li>
+<li><a href="#step-7">One argument for one poster</a></li>
+<li><a href="#step-8">A basemap that stays quiet</a></li>
+<li><a href="#step-9">Symbols, names and two drawings</a></li>
+<li><a href="#step-10">A national map, then offline</a></li>
+<li><a href="#step-11">Leaving it usable</a></li>
+</ol>
+</div>
+</section>
+
+<!-- ======================= PART 2 · BEHIND THE MAP =======================
+     Each <section class="step"> is one step. To add a step, copy a whole
+     section, give it the next id, and add a line to "How it was made". -->
+<section class="case-part" aria-labelledby="behind">
+<h2 class="part-label" id="behind">Behind the map</h2>
+
+<!-- STEP 1 -->
+<section class="step" id="step-1">
+<div class="prose">
+<span class="step-num">01</span>
+<h3>A housing type nobody has defined</h3>
+<p>Danish co-housing (<em>bofællesskab</em>) and the <em>kollektivhus</em> have had plenty of attention from architects. The urban kollektiv, where residents share a home and organize daily life together, has not. Our research asked whether it can be understood as a distinct architectural type, looking at three things: spatial (where, how big, what building), organizational (how residents share space and chores) and socio-economic (who lives there).</p>
+<p>That shaped the maps from the start. There is no official list, so a kollektiv here is any household that calls itself one. And because kollektiver live in apartments, detached houses and row houses, the maps couldn't show one building form. They had to show relationships.</p>
+</div>
+</section>
+
+<!-- STEP 2 -->
+<section class="step" id="step-2">
+<div class="prose">
+<span class="step-num">02</span>
+<h3>Where does Copenhagen end?</h3>
+<p>Kollektiver aren't confined to the municipality, so the study area couldn't be either. An early draft defined the urban area by a United Nations standard. I switched to the Copenhagen Urban Area as defined by Statistics Denmark, the national authority, and made it workable in QGIS through the 18 municipalities it intersects, using DigDag municipal boundaries.</p>
+<p>Then the first surprise: the location dataset had 108 kollektiver inside that boundary, the survey had 125. Same project, two numbers.</p>
+</div>
+<figure class="fig-detail fig-slide">
+<a href="../images/projects/kollektiv-slide-datasets.webp" target="_blank" rel="noopener noreferrer"><img alt="Progress slide titled dataset structure problem: the geographic dataset with 108 kollektiver shown as points within pink municipalities around Copenhagen, and the survey dataset with 125 kollektiver as a spreadsheet (blurred)." height="844" loading="lazy" src="../images/projects/kollektiv-slide-datasets.webp" width="1500"/></a>
+<figcaption>From my progress presentation: the study-area municipalities in pink with 108 mapped locations, next to the 125-response survey. The spreadsheet is blurred here because it contains home addresses.</figcaption>
+</figure>
+</section>
+
+<!-- STEP 3 -->
+<section class="step" id="step-3">
+<div class="prose">
+<span class="step-num">03</span>
+<h3>First, fix the file</h3>
+<p>The QGIS project I inherited opened once and then broke: source files weren't linked properly, and any work vanished when QGIS closed. Before any analysis, I traced the broken links, copied every source file into the project folder, and rebuilt the project from scratch. The result was a stable, reproducible workspace. Unglamorous, and the reason everything after it was possible.</p>
+</div>
+<figure class="fig-detail fig-slide">
+<a href="../images/projects/kollektiv-slide-fix.webp" target="_blank" rel="noopener noreferrer"><img alt="Slide titled major technical issue, in three columns. Problem: source files not properly linked; project would reset after closing QGIS. Fix: manually copied all source files locally; rebuilt the project from scratch. Result: stable and reliable QGIS project; reproducible workflow." height="844" loading="lazy" src="../images/projects/kollektiv-slide-fix.webp" width="1500"/></a>
+<figcaption>Problem, fix, result: the first hurdle, as I presented it to the team.</figcaption>
+</figure>
+</section>
+
+<!-- STEP 4 -->
+<section class="step" id="step-4">
+<div class="prose">
+<span class="step-num">04</span>
+<h3>Two datasets, no shared ID</h3>
+<p>The survey and the location data had nothing in common to join on. Address matching needed an exact text match, and spelling, formatting and capitalization varied too much. Kollektiv names worked better: they connected most records and let the mapping move forward, at the cost of some errors.</p>
+<p>The data had other problems. Eleven records had no name. About fifteen groups looked like duplicates: same name, same address, slightly different answers, roughly 22 likely extras. Some were repeat answers; others may be separate kollektiver in one building. I set the unnamed records aside for later address checks, flagged the duplicates instead of deleting them, and wrote the gaps down. Even after removing every likely extra, the counts didn't reconcile perfectly. I recorded that rather than forcing a table that only looked clean.</p>
+</div>
+<div class="fig-pair">
+<figure>
+<a href="../images/projects/kollektiv-slide-address.webp" target="_blank" rel="noopener noreferrer"><img alt="Slide: attempted address matching required an exact text match of format, spelling and capitalization, and failed due to inconsistencies." height="844" loading="lazy" src="../images/projects/kollektiv-slide-address.webp" width="1500"/></a>
+<figcaption>First attempt: addresses. Failed on inconsistent formatting.</figcaption>
+</figure>
+<figure>
+<a href="../images/projects/kollektiv-slide-name.webp" target="_blank" rel="noopener noreferrer"><img alt="Slide: implemented solution, join using kollektiv name, which connects the majority of entries and allows mapping to proceed; trade-off, some errors and mismatches remain." height="844" loading="lazy" src="../images/projects/kollektiv-slide-name.webp" width="1500"/></a>
+<figcaption>What worked: names. Most records joined; the trade-offs were documented.</figcaption>
+</figure>
+</div>
+</section>
+
+<!-- STEP 5 -->
+<section class="step" id="step-5">
+<div class="prose">
+<span class="step-num">05</span>
+<h3>Ten maps to find one pattern</h3>
+<p>With a working dataset, I mapped survey questions one at a time: housing type, house meetings, housework, relationship status, gender, education, household size, home size, establishment year, diet. Each map asked two things. Is there a spatial pattern? And is there enough data to trust it? Several questions were answered by only 60 to 75 of the 108 kollektiver. Some showed no pattern at all.</p>
+<p>One stood out immediately: apartments near the center, detached houses in the suburbs. That became the spine of everything that followed.</p>
+</div>
+<!-- EDIT: early QGIS tests. Screenshots are cropped above the attribute table, which shows names and addresses. -->
+<div class="fig-grid">
+<figure><a href="../images/projects/kollektiv-explore-type.webp" target="_blank" rel="noopener noreferrer"><img alt="QGIS screenshot: kollektiver symbolized by housing type, with apartments clustered in central Copenhagen." height="605" loading="lazy" src="../images/projects/kollektiv-explore-type.webp" width="1500"/></a><figcaption>Housing type: the first clear pattern.</figcaption></figure>
+<figure><a href="../images/projects/kollektiv-explore-meetings.webp" target="_blank" rel="noopener noreferrer"><img alt="QGIS screenshot: kollektiver symbolized by whether they hold house meetings." height="605" loading="lazy" src="../images/projects/kollektiv-explore-meetings.webp" width="1500"/></a><figcaption>House meetings: 72 of 108 answered; most don't hold them.</figcaption></figure>
+<figure><a href="../images/projects/kollektiv-explore-single.webp" target="_blank" rel="noopener noreferrer"><img alt="QGIS screenshot: kollektiver symbolized by the share of single residents." height="605" loading="lazy" src="../images/projects/kollektiv-explore-single.webp" width="1500"/></a><figcaption>Relationship status: 102 of 108 answered; about 70% single.</figcaption></figure>
+<figure><a href="../images/projects/kollektiv-explore-residents.webp" target="_blank" rel="noopener noreferrer"><img alt="QGIS screenshot: kollektiver symbolized by number of residents, graduated in red." height="605" loading="lazy" src="../images/projects/kollektiv-explore-residents.webp" width="1500"/></a><figcaption>Household size: 75 of 108; no clear spatial pattern.</figcaption></figure>
+<figure><a href="../images/projects/kollektiv-explore-established.webp" target="_blank" rel="noopener noreferrer"><img alt="QGIS screenshot: kollektiver symbolized by year established, graduated in red." height="605" loading="lazy" src="../images/projects/kollektiv-explore-established.webp" width="1500"/></a><figcaption>Year established: 60 of 108, some answers unclear; most from the 2010s and 2020s.</figcaption></figure>
+<figure><a href="../images/projects/kollektiv-explore-diet.webp" target="_blank" rel="noopener noreferrer"><img alt="QGIS screenshot: kollektiver symbolized by household diet." height="605" loading="lazy" src="../images/projects/kollektiv-explore-diet.webp" width="1500"/></a><figcaption>Diet: “mostly vegetarian” first, “only vegetarian” second.</figcaption></figure>
+</div>
+</section>
+
+<!-- STEP 6 -->
+<section class="step" id="step-6">
+<div class="prose">
+<span class="step-num">06</span>
+<h3>Four maps, four jobs</h3>
+<p>For the research paper, I narrowed the tests to four maps, each with one job and a symbol system matched to its data. Categories got hue and shape, ordered time got size, and two related quantities shared one symbol.</p>
+<p>Housing type gave the clearest reading. Living space gave the most surprising one: a big house doesn't mean more room per person. Workshops and gardens turned up mostly outside the dense center, where detached houses have the land for them.</p>
+</div>
+<div class="fig-pair">
+<figure><a href="../images/projects/kollektiv-types.webp" target="_blank" rel="noopener noreferrer"><img alt="Map 2, housing type: apartments, detached houses and row houses across the Copenhagen Urban Area, with outlined clusters." height="1535" loading="lazy" src="../images/projects/kollektiv-types.webp" width="2048"/></a><figcaption>Housing type, by hue and shape. Apartments cluster centrally; detached houses toward surrounding municipalities.</figcaption></figure>
+<figure><a href="../images/projects/kollektiv-living-space.webp" target="_blank" rel="noopener noreferrer"><img alt="Map 3, living space: colour shows square meters per resident, circle size shows the approximate total area of each kollektiv." height="1535" loading="lazy" src="../images/projects/kollektiv-living-space.webp" width="2048"/></a><figcaption>Living space, bivariate: colour for m² per resident, size for total area. Bigger homes aren't automatically roomier per person.</figcaption></figure>
+<figure><a href="../images/projects/kollektiv-establishment.webp" target="_blank" rel="noopener noreferrer"><img alt="Map 1, establishment period: circles sized by decade of establishment, from the 1960s to the 2020s." height="1535" loading="lazy" src="../images/projects/kollektiv-establishment.webp" width="2048"/></a><figcaption>Establishment period, by circle size. No simple outward spread over time.</figcaption></figure>
+<figure><a href="../images/projects/kollektiv-workshop-garden.webp" target="_blank" rel="noopener noreferrer"><img alt="Map 4, workshop and garden presence: kollektiver with both, a workshop only, a garden only, or neither." height="1535" loading="lazy" src="../images/projects/kollektiv-workshop-garden.webp" width="2048"/></a><figcaption>Workshops and gardens, by category. More common away from the densest center.</figcaption></figure>
+</div>
+</section>
+
+<!-- STEP 7 -->
+<section class="step" id="step-7">
+<div class="prose">
+<span class="step-num">07</span>
+<h3>One argument for one poster</h3>
+<p>The research maps explore; a poster has to argue. For NACIS I zoomed in from the wider urban area to the City of Copenhagen, the 80 surveyed kollektiver within it, and built the poster around the strongest pattern I had: housing type. Apartments fill the urban core; detached houses spread toward the edge.</p>
+<p>I tested adding a second dimension, but establishment year and the socio-economic answers didn't make an equally clear spatial argument. The one context layer that stayed is the city's designated vulnerable areas, in pink. Only four of the 80 kollektiver fall inside them. Survey findings that don't map well, such as shared meals and who lives there, went into short notes around the edge instead of onto the map.</p>
+</div>
+</section>
+
+<!-- STEP 8 -->
+<section class="step" id="step-8">
+<div class="prose">
+<span class="step-num">08</span>
+<h3>A basemap that stays quiet</h3>
+<p>The city matters to the argument, because location is the point. But it can't compete with the data. I built a custom low-contrast basemap: pale grey streets, soft green parks, light blue water, district names in small spaced capitals. The kollektiv symbols are the only strong thing on the page. If the basemap, boundaries or inset ever out-shout the data, the map has failed.</p>
+</div>
+<figure class="fig-detail">
+<a href="../images/projects/kollektiv-detail-map.webp" target="_blank" rel="noopener noreferrer"><img alt="Close-up of the poster around Nørrebro and Østerbro: purple apartment symbols clustered over a pale basemap with pink vulnerable areas and green parks." height="387" loading="lazy" src="../images/projects/kollektiv-detail-map.webp" width="573"/></a>
+<figcaption>Close-up from the poster, Nørrebro and Østerbro. Symbols first, city second.</figcaption>
+</figure>
+</section>
+
+<!-- STEP 9 -->
+<section class="step" id="step-9">
+<div class="prose">
+<span class="step-num">09</span>
+<h3>Symbols, names and two drawings</h3>
+<p>Each housing type has its own pictogram: an apartment block, a house, a row of houses. Readers can tell them apart without going back to the legend. Kollektiv names are left off: they'd clutter the map, and they'd point to people's homes. The exceptions are two places everyone already knows.</p>
+<p>A map can show where kollektiver are, not what living in one feels like. So the poster pairs it with two drawings. One shows a kollektiv interior, next to the story of Maos Lyst, founded in 1968 in a villa in Hellerup and one of Denmark's oldest surviving kollektiver. The other shows Freetown Christiania, founded in 1971 on former military grounds by the same youth movements: communal living at the scale of a neighbourhood. They are context, not data, and the captions say so.</p>
+</div>
+<div class="fig-pair">
+<figure><a href="../images/projects/kollektiv-detail-maoslyst.webp" target="_blank" rel="noopener noreferrer"><img alt="Detail of the poster: a pencil-style drawing of a kollektiv interior with a pendant lamp, plants and shelves, and a note about Maos Lyst, founded in 1968." height="476" loading="lazy" src="../images/projects/kollektiv-detail-maoslyst.webp" width="819"/></a><figcaption>Top left of the poster: Maos Lyst, 1968.</figcaption></figure>
+<figure><a href="../images/projects/kollektiv-detail-christiania.webp" target="_blank" rel="noopener noreferrer"><img alt="Detail of the poster: the legend with apartment, detached house and row house pictograms, and a drawing of Christiania beside Amager." height="908" loading="lazy" src="../images/projects/kollektiv-detail-christiania.webp" width="697"/></a><figcaption>Right side: the pictogram legend, and Christiania, 1971.</figcaption></figure>
+</div>
+</section>
+
+<!-- STEP 10 -->
+<section class="step" id="step-10">
+<div class="prose">
+<span class="step-num">10</span>
+<h3>A national map, then offline</h3>
+<p>Kollektivforeningen asked me to map kollektiver across all of Denmark for ICSA 2026 in Germany. I built an interactive web map with QGIS and qgis2web/Leaflet and published it on GitHub Pages: a different kind of output from the poster, built for browsing rather than for one argument. Because it showed individual homes and respondents hadn't agreed to that, I took it offline after the conference.</p>
+<p class="offline-note">The interactive map is no longer public.</p>
+</div>
+</section>
+
+<!-- STEP 11 -->
+<section class="step" id="step-11">
+<div class="prose">
+<span class="step-num">11</span>
+<h3>Leaving it usable</h3>
+<p>The last thing I made was a GIS handoff, so the next researcher doesn't start over. It documents the folder structure and why paths must stay relative, the join logic and its history, a rule to flag rather than delete duplicates, what a data dictionary should record, and the cartographic reasoning behind each map, with sources the supervisors can cite. The project went from a broken file and two disconnected tables to an organized workspace in clear groups:</p>
+<ul class="credits">
+<li><code>survey-data</code>: the joined working dataset</li>
+<li><code>map1-year</code>, <code>map2-type</code>, <code>map3-sqrm</code>, <code>map4-wkshp-grdn</code>: one group per map</li>
+<li><code>base-map</code> and <code>boundaries</code>: context, kept quiet</li>
+</ul>
+<p>What the data can't say matters as much. The records are self-identified, the join is partial, and the maps are not a census. They show patterns, not causes.</p>
+</div>
+</section>
+</section>
+
+<!-- ======================= CREDITS ======================= -->
+<section class="case-part" aria-labelledby="credits">
+<h2 class="part-label" id="credits">Credits &amp; sources</h2>
+<div class="prose">
+<ul class="credits">
+<li><em>Living kollektiv – Cartographies of the Nordic Residential Commune in Copenhagen</em>, DIS Copenhagen, Spring 2026. Supervisors: Dr. Heitor Garcia Lantarón, Dr. Rodrigo Antonio Rieiro Diaz. Student researchers: Parmida E., Eva Y., Chloe W., Hinoto Tanaka.</li>
+<li>In collaboration with Kollektivforeningen (the Danish Association of Kollektiver), which helped make the survey possible.</li>
+<li>Municipal boundaries: DigDag, via Dataforsyningen (Danish Agency for Climate Data). Study area: Copenhagen Urban Area, Statistics Denmark.</li>
+<li>Vulnerable areas on the poster: designated by the City of Copenhagen.</li>
+<li>Poster shown at the North American Cartographic Information Society (NACIS) Annual Meeting, Milwaukee, 2026. Interactive map made for ICSA 2026, Germany.</li>
+</ul>
+</div>
+</section>
+
 <p class="back bottom-back"><a href="../index.html#work">← Back to work</a></p>
 </main>
 <footer class="site-footer" id="contact"><div class="container footer-inner">
 <span>© 2026 Hinoto Tanaka</span>
-
 </div></footer>
 </body></html>
