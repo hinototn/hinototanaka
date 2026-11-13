@@ -5,6 +5,8 @@ Plain HTML, CSS and a little JavaScript. No build step: I edit a file on GitHub,
 ```
 index.html             English homepage (intro text lives here)
 ja/index.html          Japanese homepage
+about.html             About page (my name and stamp in the header link here)
+ja/about.html          Japanese About page
 project.html           English project page: one template for every project
 ja/project.html        Japanese project page: same template
 css/styles.css         all styling; fonts and colors at the top
@@ -38,7 +40,10 @@ Open `js/projects.js`. The homepage shows projects in exactly this order.
 The project's address is `project.html?id=my-new-map`.
 
 ## Fonts
-At the top of `css/styles.css`. English uses Neue Haas Grotesk from my Adobe Fonts web project: replace `YOUR-ID` in the `@import` line with my project ID and remove the comment marks. Japanese uses Noto Sans JP, loaded in each page's `<head>`.
+At the top of `css/styles.css`. English uses Helvetica Neue; Japanese uses Noto Sans JP, loaded in each page's `<head>`.
+
+## The header
+My name, stamp and the Work / About links are written in each page's `<header>` (index, project, about, in both languages). If I change them, I change all six.
 
 ## If something breaks
 - Blank project page: a missing comma or quote in `projects/<id>.js`, or the `id` in `js/projects.js` doesn't match the file name.

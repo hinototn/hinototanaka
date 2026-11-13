@@ -4,10 +4,7 @@
 
 /* ---------- Fonts and colors ---------- */
 
-/* English: Neue Haas Grotesk from my Adobe Fonts web project.
-   To turn it on, replace YOUR-ID with my project ID and remove the comment marks.
-   Until then the site uses Helvetica Neue / Arial. */
-/* @import url("https://use.typekit.net/YOUR-ID.css"); */
+/* English: Helvetica Neue (built into most computers; Arial where it isn’t). */
 
 /* Japanese: Noto Sans JP (Noto Sans CJK JP) is loaded in each page's <head>. */
 
@@ -18,10 +15,10 @@
   --line: #dedbd7;
   --accent: #744B59;   /* satsumaimo purple */
 
-  /* English: 75 Bold for titles, Display 55 Roman for headings, Display 45 Light for text */
-  --title-font: "neue-haas-grotesk-text", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --heading-font: "neue-haas-grotesk-display", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --text-font: "neue-haas-grotesk-display", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* English: Helvetica Neue. Bold for titles, Medium for headings, Light for text */
+  --title-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --heading-font: var(--title-font);
+  --text-font: var(--title-font);
   --title-weight: 700;
   --heading-weight: 500;
   --text-weight: 300;
@@ -52,8 +49,13 @@ img { max-width: 100%; height: auto; display: block; }
 /* ---------- Header: name, stamp, language toggle ---------- */
 .site-header { border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 23px 0 22px; }
-.site-name { display: inline-flex; align-items: center; gap: 9px; font-size: 20px; text-decoration: none; line-height: 1; }
-.site-name img { width: 40px; height: 40px; }
+/* My name and stamp are the biggest thing in the header, and link to my About page. */
+.site-name { display: inline-flex; align-items: center; gap: 12px; font-size: 30px; letter-spacing: -.01em; text-decoration: none; line-height: 1; }
+.site-name img { width: 58px; height: 58px; transition: transform .2s; }
+.site-name:hover img { transform: rotate(-6deg); }
+.site-nav { display: flex; align-items: center; gap: 18px; font-size: 13px; }
+.site-nav a { color: var(--muted); text-decoration: none; }
+.site-nav a:hover, .site-nav a[aria-current="page"] { color: var(--accent); }
 .lang-switch { display: flex; align-items: center; gap: 10px; font-size: 13px; }
 .lang-switch a { color: var(--muted); text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; }
 .lang-switch a[aria-current="page"], .lang-switch a:hover { color: var(--accent); border-bottom-color: var(--accent); }
@@ -125,6 +127,16 @@ figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top:
 .sources ul { font-size: 14px; padding-left: 18px; }
 .sources li { margin-bottom: 6px; }
 
+/* ---------- About page ---------- */
+.about { display: grid; grid-template-columns: 240px 1fr; gap: 56px; align-items: start; max-width: 900px; margin: 0 auto; padding: 60px 0 90px; }
+.about-stamp { margin: 0; text-align: center; }
+.about-stamp img { width: 100%; }
+.about-stamp figcaption { font-size: 15px; color: var(--ink); margin-top: 12px; }
+.about h1 { margin: 0 0 20px; }
+.about h2 { font-size: 20px; margin: 36px 0 12px; }
+.about p { margin: 0 0 16px; }
+.about a { color: var(--accent); text-underline-offset: 3px; }
+
 /* ---------- Footer ---------- */
 .site-footer { border-top: 1px solid var(--line); }
 .footer-inner { display: flex; justify-content: center; padding: 25px 0 30px; font-size: 13px; color: var(--muted); }
@@ -139,4 +151,6 @@ figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top:
   .facts { grid-template-columns: 1fr; gap: 2px; }
   .facts dd { margin-bottom: 10px; }
   .images-3 { grid-template-columns: 1fr 1fr; }
+  .about { grid-template-columns: 1fr; gap: 28px; padding-top: 40px; }
+  .about-stamp { max-width: 180px; margin: 0 auto; }
 }
