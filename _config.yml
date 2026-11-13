@@ -1,0 +1,9 @@
+# GitHub Pages settings.
+# These files are notes for editing the site, not pages for visitors,
+# so they are kept off the published website. They are still in the repository.
+exclude:
+  - docs
+  - CLAUDE.md
+  - PORTFOLIO-CONTEXT-FOR-CLAUDE.md
+  - EDITING-GUIDE.md
+  - README.md

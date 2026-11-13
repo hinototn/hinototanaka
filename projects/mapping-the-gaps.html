@@ -16,22 +16,79 @@
 <header class="site-header">
 <div class="container header-inner">
 <a class="site-name" href="../index.html"><span>Hinoto Tanaka</span><img alt="" aria-hidden="true" height="40" src="../images/hinoto-stamp.png" width="40"/></a>
-
 <nav aria-label="Language" class="lang-switch"><a aria-current="page" href="mapping-the-gaps.html" hreflang="en" lang="en">EN</a><span aria-hidden="true" class="lang-divider">/</span><a href="../ja/projects/mapping-the-gaps.html" hreflang="ja" lang="ja">日本語</a></nav></div>
 </header>
-<main class="container project-page" id="main">
+<main class="container project-page case" id="main">
 <p class="back"><a href="../index.html#work">← Work</a></p>
 <h1>Mapping the Gaps</h1>
 <p class="project-intro">Middlebury is easy to walk around in many places. But how accessible is it for someone who relies on tactile paving?</p>
+
 <div class="project-hero"><figure class="map-main">
-<a aria-label="Open full-size image: Middlebury College campus tactile paving survey, with blue symbols for existing accessible infrastructure and red symbols for barriers." href="../images/projects/tactile-map.webp" rel="noopener noreferrer" target="_blank"><img alt="Middlebury College campus tactile paving survey, with blue symbols for existing accessible infrastructure and red symbols for barriers." height="2048" loading="lazy" src="../images/projects/tactile-map.webp" width="2048"/></a>
-<figcaption>Mapping the Gaps — final map</figcaption>
+<a href="../images/projects/tactile-map.webp" target="_blank" rel="noopener noreferrer"><img alt="Middlebury College campus tactile paving survey, with blue symbols for existing tactile paving and red symbols where it is missing." height="2048" src="../images/projects/tactile-map.webp" width="2048"/></a>
+<figcaption>Blue: tactile paving present. Red: missing. Click to open full size.</figcaption>
 </figure></div>
-<div class="project-writing"><p>In September 2025, I walked around campus with Mimi and Arlo to record tactile paving at crosswalks, sidewalks, intersections, stairs, and slopes. I mapped what we found in QGIS.</p><p>Blue marks places with tactile paving; red marks places without it. Several crosswalks are missing tactile warnings, and none of the stairs or slopes we surveyed had them.</p></div>
+
+<!-- ======================= PART 1 · AT A GLANCE ======================= -->
+<section class="case-part" aria-labelledby="glance">
+<h2 class="part-label" id="glance">At a glance</h2>
+<div class="prose">
+<!-- EDIT: the facts list. Each line is a <dt> (label) and a <dd> (details). -->
+<dl class="facts">
+<dt>Year</dt><dd>2025 (fieldwork in September)</dd>
+<dt>Team</dt><dd>With Mimi and Arlo</dd>
+<dt>Tools</dt><dd>QGIS, OpenStreetMap</dd>
+<dt>Data</dt><dd>Our own field survey of crosswalks, sidewalks, intersections, stairs and slopes</dd>
+<dt>Output</dt><dd>A campus map</dd>
+<dt>Skills</dt><dd>Field survey, data collection, accessibility mapping, symbol design</dd>
+</dl>
+<p>No dataset existed, so we made one on foot. Several crosswalks are missing tactile warnings, and none of the stairs or slopes we surveyed had them.</p>
+<h3 class="workflow-title">How it was made</h3>
+<ol class="workflow">
+<li><a href="#step-1">Walking the campus</a></li>
+<li><a href="#step-2">Blue and red</a></li>
+</ol>
+</div>
+</section>
+
+<!-- ======================= PART 2 · BEHIND THE MAP =======================
+     Each <section class="step"> is one step. To add a step, copy a whole
+     section, give it the next id, and add a line to the list above. -->
+<section class="case-part" aria-labelledby="behind">
+<h2 class="part-label" id="behind">Behind the map</h2>
+
+<!-- STEP 1 -->
+<section class="step" id="step-1">
+<div class="prose">
+<span class="step-num">01</span>
+<h3>Walking the campus</h3>
+<p>In September 2025, Mimi, Arlo and I walked campus and recorded tactile paving at crosswalks, sidewalks, intersections, stairs and slopes, then mapped every point in QGIS on an OpenStreetMap base.</p>
+</div>
+
+</section>
+<!-- STEP 2 -->
+<section class="step" id="step-2">
+<div class="prose">
+<span class="step-num">02</span>
+<h3>Blue and red</h3>
+<p>Two colours, one question: is it there or not? Distinct symbols for each kind of place let the reader see what is missing, and where. The map covers the routes we walked. It is a survey, not an official compliance audit.</p>
+</div>
+
+</section>
+</section>
+
+<section class="case-part" aria-labelledby="credits">
+<h2 class="part-label" id="credits">Credits &amp; sources</h2>
+<div class="prose">
+<ul class="credits">
+<li>Field survey with Mimi and Arlo, September 2025.</li>
+<li>Base data: OpenStreetMap contributors.</li>
+</ul>
+</div>
+</section>
+
 <p class="back bottom-back"><a href="../index.html#work">← Back to work</a></p>
 </main>
 <footer class="site-footer" id="contact"><div class="container footer-inner">
 <span>© 2026 Hinoto Tanaka</span>
-
 </div></footer>
 </body></html>

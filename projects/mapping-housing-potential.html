@@ -16,22 +16,69 @@
 <header class="site-header">
 <div class="container header-inner">
 <a class="site-name" href="../index.html"><span>Hinoto Tanaka</span><img alt="" aria-hidden="true" height="40" src="../images/hinoto-stamp.png" width="40"/></a>
-
 <nav aria-label="Language" class="lang-switch"><a aria-current="page" href="mapping-housing-potential.html" hreflang="en" lang="en">EN</a><span aria-hidden="true" class="lang-divider">/</span><a href="../ja/projects/mapping-housing-potential.html" hreflang="ja" lang="ja">日本語</a></nav></div>
 </header>
-<main class="container project-page" id="main">
+<main class="container project-page case" id="main">
 <p class="back"><a href="../index.html#work">← Work</a></p>
 <h1>Mapping Housing Potential</h1>
 <p class="project-intro">Where might new housing make sense in Addison County, Vermont?</p>
+
 <div class="project-hero"><figure class="map-main">
-<a aria-label="Open full-size image: Map of Addison County showing candidate housing development zones hatched pink, schools, stores, and wetlands." href="../images/projects/addison-housing.webp" rel="noopener noreferrer" target="_blank"><img alt="Map of Addison County showing candidate housing development zones hatched pink, schools, stores, and wetlands." height="2048" loading="lazy" src="../images/projects/addison-housing.webp" width="1325"/></a>
-<figcaption>Mapping Housing Potential — final map</figcaption>
+<a href="../images/projects/addison-housing.webp" target="_blank" rel="noopener noreferrer"><img alt="Map of Addison County showing candidate housing development zones hatched pink, with schools, grocery stores and wetlands." height="2048" src="../images/projects/addison-housing.webp" width="1325"/></a>
+<figcaption>Candidate zones, hatched in pink. Click to open full size.</figcaption>
 </figure></div>
-<div class="project-writing"><p>I mapped possible development areas using existing residential land and distance to schools and grocery stores. The analysis used a half-mile buffer around K–12 schools and a five-mile buffer around grocery stores.</p><p>The map also includes wetlands and other surrounding features. It is a starting point for considering potential sites, not a list of places that should be built on.</p></div>
+
+<!-- ======================= PART 1 · AT A GLANCE ======================= -->
+<section class="case-part" aria-labelledby="glance">
+<h2 class="part-label" id="glance">At a glance</h2>
+<div class="prose">
+<!-- EDIT: the facts list. Each line is a <dt> (label) and a <dd> (details). -->
+<dl class="facts">
+<dt>Year</dt><dd>2026</dd>
+<dt>Tools</dt><dd>QGIS</dd>
+<dt>Data</dt><dd>Existing residential land, K–12 schools, grocery stores, wetlands</dd>
+<dt>Output</dt><dd>A county suitability map</dd>
+<dt>Skills</dt><dd>Suitability screening, buffer analysis, overlay, map design</dd>
+</dl>
+<p>Vermont needs housing, and a family needs more than a lot. I screened Addison County for land that is already residential, close to a school and within reach of groceries.</p>
+<h3 class="workflow-title">How it was made</h3>
+<ol class="workflow">
+<li><a href="#step-1">Three filters</a></li>
+<li><a href="#step-2">A starting point, not a plan</a></li>
+</ol>
+</div>
+</section>
+
+<!-- ======================= PART 2 · BEHIND THE MAP =======================
+     Each <section class="step"> is one step. To add a step, copy a whole
+     section, give it the next id, and add a line to the list above. -->
+<section class="case-part" aria-labelledby="behind">
+<h2 class="part-label" id="behind">Behind the map</h2>
+
+<!-- STEP 1 -->
+<section class="step" id="step-1">
+<div class="prose">
+<span class="step-num">01</span>
+<h3>Three filters</h3>
+<p>A place qualified if it was existing residential land, within half a mile of a K–12 school, and within five miles of a grocery store. Where all three overlap, the map hatches it pink. Hatching keeps the land underneath readable.</p>
+</div>
+
+</section>
+<!-- STEP 2 -->
+<section class="step" id="step-2">
+<div class="prose">
+<span class="step-num">02</span>
+<h3>A starting point, not a plan</h3>
+<p>Wetlands and other features stay on the map so the constraints are visible next to the candidates. The result is a place to start the conversation, not a list of places that should be built on.</p>
+</div>
+
+</section>
+</section>
+
+
 <p class="back bottom-back"><a href="../index.html#work">← Back to work</a></p>
 </main>
 <footer class="site-footer" id="contact"><div class="container footer-inner">
 <span>© 2026 Hinoto Tanaka</span>
-
 </div></footer>
 </body></html>

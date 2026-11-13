@@ -18,15 +18,74 @@
 <a class="site-name" href="../index.html"><span>Hinoto Tanaka</span><img alt="" aria-hidden="true" height="40" src="../../images/hinoto-stamp.png" width="40"/></a>
 <nav aria-label="表示言語" class="lang-switch"><a href="../../projects/mapping-the-gaps.html" hreflang="en" lang="en">EN</a><span aria-hidden="true" class="lang-divider">/</span><a aria-current="page" href="mapping-the-gaps.html" hreflang="ja" lang="ja">日本語</a></nav></div>
 </header>
-<main class="container project-page" id="main">
+<main class="container project-page case" id="main">
 <p class="back"><a href="../index.html#work">← 作品一覧へ</a></p>
 <h1>点字ブロックの足りない場所</h1>
 <p class="project-intro">ミドルベリー大学のキャンパスは、目が不自由な人にとっても歩きやすいのか。</p>
+
 <div class="project-hero"><figure class="map-main">
-<a aria-label="画像を大きく開く：ミドルベリー大学の点字ブロック調査。青は設置されている場所、赤は足りない場所" href="../../images/projects/tactile-map.webp" rel="noopener noreferrer" target="_blank"><img alt="ミドルベリー大学の点字ブロック調査。青は設置されている場所、赤は足りない場所" height="2048" loading="lazy" src="../../images/projects/tactile-map.webp" width="2048"/></a>
-<figcaption>キャンパスの点字ブロック調査</figcaption>
+<a href="../../images/projects/tactile-map.webp" target="_blank" rel="noopener noreferrer"><img alt="ミドルベリー大学の点字ブロック調査。青は設置されている場所、赤は足りない場所。" height="2048" src="../../images/projects/tactile-map.webp" width="2048"/></a>
+<figcaption>青は点字ブロックあり、赤はなし。 クリックすると原寸で開く。</figcaption>
 </figure></div>
-<div class="project-writing"><p>2025年9月、Mimi、Arloとキャンパスを歩き、横断歩道、歩道、交差点、階段、坂道の点字ブロックを調べた。結果をQGISで地図にした。</p><p>青は点字ブロックがある場所、赤はない場所。いくつもの横断歩道で注意を促すブロックが欠け、調べた階段と坂道には一つもなかった。</p></div>
+
+<!-- ======================= PART 1 · AT A GLANCE ======================= -->
+<section class="case-part" aria-labelledby="glance">
+<h2 class="part-label" id="glance">概要</h2>
+<div class="prose">
+<!-- EDIT: the facts list. Each line is a <dt> (label) and a <dd> (details). -->
+<dl class="facts">
+<dt>年</dt><dd>2025（9月に現地調査）</dd>
+<dt>チーム</dt><dd>Mimi、Arloと</dd>
+<dt>ツール</dt><dd>QGIS、OpenStreetMap</dd>
+<dt>データ</dt><dd>横断歩道、歩道、交差点、階段、坂道の現地調査（自分たちで実施）</dd>
+<dt>成果物</dt><dd>キャンパスの地図</dd>
+<dt>スキル</dt><dd>現地調査、データ収集、バリアフリーの地図化、記号のデザイン</dd>
+</dl>
+<p>データがなかったので、歩いて作った。いくつもの横断歩道で警告用の点字ブロックが欠けていて、調べた階段と坂道には一つもなかった。</p>
+<h3 class="workflow-title">作り方</h3>
+<ol class="workflow">
+<li><a href="#step-1">キャンパスを歩く</a></li>
+<li><a href="#step-2">青と赤</a></li>
+</ol>
+</div>
+</section>
+
+<!-- ======================= PART 2 · BEHIND THE MAP =======================
+     Each <section class="step"> is one step. To add a step, copy a whole
+     section, give it the next id, and add a line to the list above. -->
+<section class="case-part" aria-labelledby="behind">
+<h2 class="part-label" id="behind">地図ができるまで</h2>
+
+<!-- STEP 1 -->
+<section class="step" id="step-1">
+<div class="prose">
+<span class="step-num">01</span>
+<h3>キャンパスを歩く</h3>
+<p>2025年9月、Mimi、Arloとキャンパスを歩き、横断歩道、歩道、交差点、階段、坂道の点字ブロックを記録した。その全地点を、OpenStreetMapをもとにQGISで地図にした。</p>
+</div>
+
+</section>
+<!-- STEP 2 -->
+<section class="step" id="step-2">
+<div class="prose">
+<span class="step-num">02</span>
+<h3>青と赤</h3>
+<p>色は二つ、問いは一つ。あるか、ないか。場所の種類ごとに記号を変え、何がどこで足りないかが見えるようにした。地図に載っているのは歩いた範囲だけ。調査であって、正式な基準の審査ではない。</p>
+</div>
+
+</section>
+</section>
+
+<section class="case-part" aria-labelledby="credits">
+<h2 class="part-label" id="credits">クレジットと出典</h2>
+<div class="prose">
+<ul class="credits">
+<li>現地調査：Mimi、Arloと（2025年9月）</li>
+<li>ベースデータ：OpenStreetMapの貢献者</li>
+</ul>
+</div>
+</section>
+
 <p class="back bottom-back"><a href="../index.html#work">← 作品一覧へ</a></p>
 </main>
 <footer class="site-footer" id="contact"><div class="container footer-inner">
