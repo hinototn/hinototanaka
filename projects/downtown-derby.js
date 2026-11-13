@@ -4,7 +4,7 @@
 project({
   intro: { en: "Two ways of mapping downtown Louisville, Kentucky.", ja: "ケンタッキー州ルイビルの中心部を、二つの方法で地図にした。" },
   hero: {
-    file: "louisville-housing.webp",
+    file: "louisville-housing.webp", width: 820,   // a bit smaller than full width
     alt: { en: "Orange choropleth showing areas with 50 or more housing units in central Louisville.", ja: "ルイビル中心部で住宅が50戸以上ある地区をオレンジ色で示した地図。" },
     caption: { en: "Areas with 50 or more housing units.", ja: "住宅が50戸以上ある地区。" },
   },

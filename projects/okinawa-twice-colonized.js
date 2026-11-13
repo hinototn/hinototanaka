@@ -61,7 +61,7 @@ project({
              "地図に載せるのは沖縄本島だけにし、分類も森林、市街地、農地、サンゴ礁にしぼった。分類を増やすと、伝えたいことがぼやけるからだ。海岸線や土地の形はこの縮尺には細かすぎたので、Howarth先生に教わりながら、コードと手作業で単純化した。"],
       },
       images: [
-        { file: "okinawa-detail-legend.webp", alt: { en: "Close-up of northern Okinawa and the legend.", ja: "沖縄本島北部と凡例の拡大。" }, caption: { en: "A short legend, ordered by the story rather than the alphabet.", ja: "凡例は短く、五十音順ではなく話の順に並べた。" } },
+        { file: "okinawa-detail-legend.webp", alt: { en: "Close-up of northern Okinawa and the legend.", ja: "沖縄本島北部と凡例の拡大。" }, caption: { en: "The full legend, ordered by the story rather than the alphabet.", ja: "凡例は短く、五十音順ではなく話の順に並べた。" } },
         { file: "okinawa-detail-coast.webp", alt: { en: "Close-up of the Motobu Peninsula and Nago with simplified shapes and no coastline outline.", ja: "本部半島と名護のあたりの拡大。単純化した形で、海岸線の線はない。" }, caption: { en: "Simplified shapes and no hard coastline.", ja: "形は単純に、海岸線は引かない。" } },
       ],
     },
@@ -75,9 +75,9 @@ project({
     {
       heading: { en: "Color and type", ja: "色と文字" },
       text: {
-        en: ["I collected maps I admired, by Tom Patterson, Margaret Pearce and William Bunge among others, alongside photographs of traditional Okinawan textiles, and took the palette from the fabrics. My first pull was bright. In the final map I kept the same family of colors but muted everything except the bases, which are the only fully saturated color. The other colors differ in both hue and lightness so the map doesn’t depend on red–green contrast.",
+        en: ["I collected maps I admired, by Tom Patterson, Margaret Pearce and William Bunge among others, alongside photographs of traditional Okinawan kimono, and took the map’s color scheme from the kimono. My first pull was bright. In the final map I kept the same family of colors but muted everything except the bases, which are the only fully saturated color. The other colors differ in both hue and lightness so the map doesn’t depend on red–green contrast.",
              "All the type is Avenir. Naha is the largest label, then cities and villages, and base names are small but set in the same bold red as the bases and their headings, so the three read together. The locator mark is the Ryukyu royal crest rather than a generic dot. For sizes and balance, I studied Katie Heo’s maps closely."],
-        ja: ["Tom Patterson、Margaret Pearce、William Bungeなどの好きな地図と、沖縄の伝統的な織物の写真を集め、配色は布からとった。最初に拾った色は鮮やかだった。完成版では同じ系統の色を残しつつ、基地以外はすべて彩度を落とし、基地だけをはっきりした赤にした。ほかの色は色相と明るさの両方で区別し、赤と緑の対比だけに頼らないようにした。",
+        ja: ["Tom Patterson、Margaret Pearce、William Bungeなどの好きな地図と、沖縄の伝統的な着物の写真を集め、地図の配色は着物からとった。最初に拾った色は鮮やかだった。完成版では同じ系統の色を残しつつ、基地以外はすべて彩度を落とし、基地だけをはっきりした赤にした。ほかの色は色相と明るさの両方で区別し、赤と緑の対比だけに頼らないようにした。",
              "書体はすべてAvenir。那覇がいちばん大きく、次に市、村の順にした。基地の名前は小さいが、基地の色や説明の見出しと同じ太い赤にして、三つが一緒に読めるようにした。位置図の印は、ただの点ではなく琉球王家の紋にした。文字の大きさやバランスは、Katie Heoの地図をよく見て学んだ。"],
       },
       colors: [
@@ -91,6 +91,8 @@ project({
           { hex: "#b5c7d8", name: { en: "Coral reef", ja: "サンゴ礁" } } ] },
       ],
       images: [
+        { file: "okinawa-kimono-1.webp", alt: { en: "Magazine spread: a cream and purple Ryukyu kimono displayed under a coral rock arch.", ja: "雑誌の見開き。サンゴの岩のアーチの下に飾られた、白地に紫の琉球の着物。" }, caption: { en: "Reference: traditional Okinawan kimono (Shuri Ryusen). Not my work.", ja: "参考資料：沖縄の伝統的な着物（首里琉染）。私の作品ではない。" } },
+        { file: "okinawa-kimono-2.webp", alt: { en: "Magazine spread: a bright blue Ryukyu kimono hung inside a red Okinawan gate.", ja: "雑誌の見開き。赤い門の中に掛けられた、鮮やかな青の琉球の着物。" }, caption: { en: "Reference: traditional Okinawan kimono (Shuri Ryusen). Not my work.", ja: "参考資料：沖縄の伝統的な着物（首里琉染）。私の作品ではない。" } },
         { file: "okinawa-detail-type.webp", alt: { en: "Close-up of southern Okinawa: base names in small red bold type and Naha as the largest label.", ja: "沖縄本島南部の拡大。基地の名前は小さな赤の太字、那覇がいちばん大きい。" }, caption: { en: "Naha leads; base names carry the one strong color.", ja: "那覇がいちばん大きく、基地の名前だけが強い色を持つ。" } },
         { file: "okinawa-crest.webp", alt: { en: "The locator mark: the Ryukyu royal crest in deep red.", ja: "位置図の印。深い赤の琉球王家の紋。" }, caption: { en: "The Ryukyu royal crest as the locator mark.", ja: "位置図の印にした琉球王家の紋。" } },
       ],

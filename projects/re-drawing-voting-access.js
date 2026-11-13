@@ -4,7 +4,7 @@
 project({
   intro: { en: "Could Richmond make polling places easier to reach by moving them?", ja: "投票所の場所を変えたら、リッチモンドの人たちは投票しやすくなるのか。" },
   hero: {
-    file: "richmond-change.webp",
+    file: "richmond-change.webp", width: 860,   // a bit smaller than full width
     alt: { en: "Richmond precincts showing how the share of homes more than a mile from a polling station changes when polling places move.", ja: "投票所を動かしたとき、投票所まで1マイル以上ある住宅の割合が各地区でどう変わるかを示した地図。" },
     caption: { en: "Change in the share of homes more than a mile from their polling place.", ja: "投票所まで1マイル以上ある住宅の割合の変化。" },
   },
