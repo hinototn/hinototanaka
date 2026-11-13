@@ -45,7 +45,8 @@ function section(s) {
   </section>`;
 }
 
-// The big map at the top. If the project has a second version (Okinawa's
+// The big map at the top. It never gets taller than the screen; a project can
+// also set width: (in pixels) to make it smaller. If the project has a second version (Okinawa's
 // Japanese edition), I add two buttons to switch between them.
 function hero(h) {
   const versions = [h, h.other].filter(Boolean);
@@ -54,7 +55,7 @@ function hero(h) {
         `<button type="button" data-show="${i}" aria-pressed="${i === 0}">${v.button}</button>`).join('')}</div>`
     : '';
   return `${buttons}${versions.map((v, i) => `
-    <figure class="hero" data-version="${i}" ${i ? 'hidden' : ''}>
+    <figure class="hero" data-version="${i}" ${i ? 'hidden' : ''} ${v.width ? `style="max-width:${v.width}px"` : ''}>
       <a href="${root}images/projects/${v.file}" target="_blank" rel="noopener"><img src="${root}images/projects/${v.file}" alt="${v.alt[lang]}"></a>
       <figcaption>${v.caption[lang]} ${words[lang].open}</figcaption>
     </figure>`).join('')}`;
