@@ -147,3 +147,5 @@ h1 { font-size: clamp(27px, 3.2vw, 34px); font-weight: 700; letter-spacing: -.02
 :lang(ja) .case .prose, :lang(ja) .facts dd { line-height: 1.85; }
 /* Presentation slides: framed, and narrower than full-width maps. */
 .fig-slide img { width: 100%; max-width: 760px; }
+/* Space between two palette rows (e.g. first palette vs final palette). */
+.swatches + .workflow-title { margin-top: 26px; }
