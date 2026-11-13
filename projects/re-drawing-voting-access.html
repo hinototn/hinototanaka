@@ -16,35 +16,90 @@
 <header class="site-header">
 <div class="container header-inner">
 <a class="site-name" href="../index.html"><span>Hinoto Tanaka</span><img alt="" aria-hidden="true" height="40" src="../images/hinoto-stamp.png" width="40"/></a>
-
 <nav aria-label="Language" class="lang-switch"><a aria-current="page" href="re-drawing-voting-access.html" hreflang="en" lang="en">EN</a><span aria-hidden="true" class="lang-divider">/</span><a href="../ja/projects/re-drawing-voting-access.html" hreflang="ja" lang="ja">日本語</a></nav></div>
 </header>
-<main class="container project-page" id="main">
+<main class="container project-page case" id="main">
 <p class="back"><a href="../index.html#work">← Work</a></p>
 <h1>Re-Drawing Voting Access</h1>
 <p class="project-intro">Could Richmond make polling places easier to reach by moving them?</p>
+
 <div class="project-hero"><figure class="map-main">
-<a aria-label="Open full-size image: Map of Richmond precincts showing changes in the share of homes more than one mile from a polling station." href="../images/projects/richmond-change.webp" rel="noopener noreferrer" target="_blank"><img alt="Map of Richmond precincts showing changes in the share of homes more than one mile from a polling station." height="1448" loading="lazy" src="../images/projects/richmond-change.webp" width="2048"/></a>
-<figcaption>Re-Drawing Voting Access — final map</figcaption>
+<a href="../images/projects/richmond-change.webp" target="_blank" rel="noopener noreferrer"><img alt="Map of Richmond precincts showing how the share of homes more than one mile from a polling station changes when polling places move: red where it rises, blue where it falls." height="1448" src="../images/projects/richmond-change.webp" width="2048"/></a>
+<figcaption>Change in the share of homes more than a mile from their polling place. Click to open full size.</figcaption>
 </figure></div>
-<div class="project-writing"><p>I used QGIS to map the share of residential addresses more than one mile from their polling station. I also looked at households without cars, since distance matters differently when you cannot drive.</p><p>I tested alternative polling locations and compared the results. Access improved in 40 precincts but worsened in 15. The average share of addresses more than a mile away fell from 22.9% to 21.2%. Moving a polling place can help, but not everywhere.</p></div>
-<section class="additional-maps"><h2>More maps</h2><div class="gallery-grid"><figure class="map-secondary">
-<a aria-label="Open full-size image: Existing polling stations" href="../images/projects/richmond-before.webp" rel="noopener noreferrer" target="_blank"><img alt="Existing polling stations" height="1448" loading="lazy" src="../images/projects/richmond-before.webp" width="2048"/></a>
-<figcaption>Existing polling stations</figcaption>
-</figure><figure class="map-secondary">
-<a aria-label="Open full-size image: Updated polling stations" href="../images/projects/richmond-after.webp" rel="noopener noreferrer" target="_blank"><img alt="Updated polling stations" height="1448" loading="lazy" src="../images/projects/richmond-after.webp" width="2048"/></a>
-<figcaption>Updated polling stations</figcaption>
-</figure><figure class="map-secondary">
-<a aria-label="Open full-size image: Households without cars" href="../images/projects/richmond-carless.webp" rel="noopener noreferrer" target="_blank"><img alt="Households without cars" height="1448" loading="lazy" src="../images/projects/richmond-carless.webp" width="2048"/></a>
-<figcaption>Households without cars</figcaption>
-</figure><figure class="map-secondary">
-<a aria-label="Open full-size image: Summary of change in voting access" href="../images/projects/richmond-stats.webp" rel="noopener noreferrer" target="_blank"><img alt="Summary of change in voting access" height="754" loading="lazy" src="../images/projects/richmond-stats.webp" width="2002"/></a>
-<figcaption>Summary of change in voting access</figcaption>
-</figure></div></section>
+
+<!-- ======================= PART 1 · AT A GLANCE ======================= -->
+<section class="case-part" aria-labelledby="glance">
+<h2 class="part-label" id="glance">At a glance</h2>
+<div class="prose">
+<!-- EDIT: the facts list. Each line is a <dt> (label) and a <dd> (details). -->
+<dl class="facts">
+<dt>Year</dt><dd>2025</dd>
+<dt>Tools</dt><dd>QGIS</dd>
+<dt>Data</dt><dd>Richmond precincts, polling stations, residential addresses, roads and water; households without a car (American Community Survey)</dd>
+<dt>Output</dt><dd>Before, after and change maps; a summary table</dd>
+<dt>Skills</dt><dd>Distance analysis, site modelling, before-and-after comparison, choropleth design</dd>
+</dl>
+<p>Distance is a quiet barrier to voting, especially without a car. I measured how far Richmond homes are from their polling places, then moved the polling places on paper to see what changed. Access improved in 40 precincts and got worse in 15; the average share of homes more than a mile away fell from 22.9% to 21.2%.</p>
+<h3 class="workflow-title">How it was made</h3>
+<ol class="workflow">
+<li><a href="#step-1">Why a mile matters</a></li>
+<li><a href="#step-2">Moving the polling places</a></li>
+<li><a href="#step-3">Better in 40, worse in 15</a></li>
+</ol>
+</div>
+</section>
+
+<!-- ======================= PART 2 · BEHIND THE MAP =======================
+     Each <section class="step"> is one step. To add a step, copy a whole
+     section, give it the next id, and add a line to the list above. -->
+<section class="case-part" aria-labelledby="behind">
+<h2 class="part-label" id="behind">Behind the map</h2>
+
+<!-- STEP 1 -->
+<section class="step" id="step-1">
+<div class="prose">
+<span class="step-num">01</span>
+<h3>Why a mile matters</h3>
+<p>For every precinct, I calculated the share of residential addresses more than one mile from their assigned polling station. A mile is a short drive and a long walk, so I mapped households without a car alongside it: the people for whom distance matters most.</p>
+</div>
+<figure class="fig-full"><a href="../images/projects/richmond-carless.webp" target="_blank" rel="noopener noreferrer"><img alt="Map of households without a car across Richmond." height="1448" loading="lazy" src="../images/projects/richmond-carless.webp" width="2048"/></a><figcaption>Households without a car: where distance to the polls hurts most.</figcaption></figure>
+</section>
+<!-- STEP 2 -->
+<section class="step" id="step-2">
+<div class="prose">
+<span class="step-num">02</span>
+<h3>Moving the polling places</h3>
+<p>Then I tested alternative polling locations, using the pole of inaccessibility (the point hardest to reach) as a guide, and recalculated every distance. Keeping the precinct map, colours and classes identical across the two versions made the comparison honest.</p>
+</div>
+<div class="fig-pair">
+<figure><a href="../images/projects/richmond-before.webp" target="_blank" rel="noopener noreferrer"><img alt="Map of existing polling stations and the share of homes more than one mile away in each precinct." height="1448" loading="lazy" src="../images/projects/richmond-before.webp" width="2048"/></a><figcaption>Before: existing polling stations.</figcaption></figure>
+<figure><a href="../images/projects/richmond-after.webp" target="_blank" rel="noopener noreferrer"><img alt="Map of updated polling stations and the share of homes more than one mile away in each precinct." height="1448" loading="lazy" src="../images/projects/richmond-after.webp" width="2048"/></a><figcaption>After: updated polling stations, same classes.</figcaption></figure>
+</div>
+</section>
+<!-- STEP 3 -->
+<section class="step" id="step-3">
+<div class="prose">
+<span class="step-num">03</span>
+<h3>Better in 40, worse in 15</h3>
+<p>Moving polling places helped on average, but not everywhere: improving one precinct can push another farther away. This is a model, not a siting recommendation. Real polling places need buildings, accessibility and approval that a distance analysis can’t see.</p>
+</div>
+<figure class="fig-detail fig-slide"><a href="../images/projects/richmond-stats.webp" target="_blank" rel="noopener noreferrer"><img alt="Table summarising change in voting access: precincts improved, worsened and average share of addresses more than one mile away." height="754" loading="lazy" src="../images/projects/richmond-stats.webp" width="2002"/></a><figcaption>The numbers behind the change map.</figcaption></figure>
+</section>
+</section>
+
+<section class="case-part" aria-labelledby="credits">
+<h2 class="part-label" id="credits">Credits &amp; sources</h2>
+<div class="prose">
+<ul class="credits">
+<li>Households without a car: U.S. Census Bureau, American Community Survey.</li>
+</ul>
+</div>
+</section>
+
 <p class="back bottom-back"><a href="../index.html#work">← Back to work</a></p>
 </main>
 <footer class="site-footer" id="contact"><div class="container footer-inner">
 <span>© 2026 Hinoto Tanaka</span>
-
 </div></footer>
 </body></html>

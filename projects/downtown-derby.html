@@ -16,26 +16,77 @@
 <header class="site-header">
 <div class="container header-inner">
 <a class="site-name" href="../index.html"><span>Hinoto Tanaka</span><img alt="" aria-hidden="true" height="40" src="../images/hinoto-stamp.png" width="40"/></a>
-
 <nav aria-label="Language" class="lang-switch"><a aria-current="page" href="downtown-derby.html" hreflang="en" lang="en">EN</a><span aria-hidden="true" class="lang-divider">/</span><a href="../ja/projects/downtown-derby.html" hreflang="ja" lang="ja">日本語</a></nav></div>
 </header>
-<main class="container project-page" id="main">
+<main class="container project-page case" id="main">
 <p class="back"><a href="../index.html#work">← Work</a></p>
 <h1>Downtown Derby</h1>
 <p class="project-intro">Two ways of mapping downtown Louisville, Kentucky.</p>
+
 <div class="project-hero"><figure class="map-main">
-<a aria-label="Open full-size image: Orange choropleth showing areas with 50 or more housing units in central Louisville." href="../images/projects/louisville-housing.webp" rel="noopener noreferrer" target="_blank"><img alt="Orange choropleth showing areas with 50 or more housing units in central Louisville." height="1322" loading="lazy" src="../images/projects/louisville-housing.webp" width="1764"/></a>
-<figcaption>Downtown Derby — final map</figcaption>
+<a href="../images/projects/louisville-housing.webp" target="_blank" rel="noopener noreferrer"><img alt="Orange choropleth showing areas with 50 or more housing units in central Louisville." height="1322" src="../images/projects/louisville-housing.webp" width="1764"/></a>
+<figcaption>Areas with 50 or more housing units. Click to open full size.</figcaption>
 </figure></div>
-<div class="project-writing"><p>One map shows areas with 50 or more housing units. The other focuses on streets and the built environment using OpenStreetMap data.</p><p>I made them to explore how the same part of a city changes when the scale and subject change.</p></div>
-<section class="additional-maps"><h2>More maps</h2><div class="gallery-grid"><figure class="map-secondary">
-<a aria-label="Open full-size image: Street network and urban context" href="../images/projects/louisville-basemap.webp" rel="noopener noreferrer" target="_blank"><img alt="Street network and urban context" height="1327" loading="lazy" src="../images/projects/louisville-basemap.webp" width="1704"/></a>
-<figcaption>Street network and urban context</figcaption>
-</figure></div></section>
+
+<!-- ======================= PART 1 · AT A GLANCE ======================= -->
+<section class="case-part" aria-labelledby="glance">
+<h2 class="part-label" id="glance">At a glance</h2>
+<div class="prose">
+<!-- EDIT: the facts list. Each line is a <dt> (label) and a <dd> (details). -->
+<dl class="facts">
+<dt>Year</dt><dd>2026</dd>
+<dt>Data</dt><dd>American Community Survey 2023 (5-year estimates), via Social Explorer; OpenStreetMap</dd>
+<dt>Output</dt><dd>A thematic map and a reference map</dd>
+<dt>Skills</dt><dd>Choropleth design, OpenStreetMap basemaps, scale</dd>
+</dl>
+<p>The same few square miles, mapped twice: once as data, once as streets and buildings. What a city looks like depends on what you choose to draw.</p>
+<h3 class="workflow-title">How it was made</h3>
+<ol class="workflow">
+<li><a href="#step-1">Counting housing</a></li>
+<li><a href="#step-2">Streets and buildings</a></li>
+</ol>
+</div>
+</section>
+
+<!-- ======================= PART 2 · BEHIND THE MAP =======================
+     Each <section class="step"> is one step. To add a step, copy a whole
+     section, give it the next id, and add a line to the list above. -->
+<section class="case-part" aria-labelledby="behind">
+<h2 class="part-label" id="behind">Behind the map</h2>
+
+<!-- STEP 1 -->
+<section class="step" id="step-1">
+<div class="prose">
+<span class="step-num">01</span>
+<h3>Counting housing</h3>
+<p>The first map shows areas with 50 or more housing units, from the 2023 American Community Survey. One warm colour ramp, light to dark, keeps the downtown core easy to find.</p>
+</div>
+
+</section>
+<!-- STEP 2 -->
+<section class="step" id="step-2">
+<div class="prose">
+<span class="step-num">02</span>
+<h3>Streets and buildings</h3>
+<p>The second uses OpenStreetMap to draw the street network and built environment. Side by side, the two maps show how much a map’s subject and scale change the same place.</p>
+</div>
+<figure class="fig-full"><a href="../images/projects/louisville-basemap.webp" target="_blank" rel="noopener noreferrer"><img alt="Reference map of downtown Louisville: street network and buildings from OpenStreetMap." height="1327" loading="lazy" src="../images/projects/louisville-basemap.webp" width="1704"/></a><figcaption>Street network and urban context.</figcaption></figure>
+</section>
+</section>
+
+<section class="case-part" aria-labelledby="credits">
+<h2 class="part-label" id="credits">Credits &amp; sources</h2>
+<div class="prose">
+<ul class="credits">
+<li>Housing data: U.S. Census Bureau, American Community Survey 2023 5-year estimates, via Social Explorer.</li>
+<li>Streets and buildings: OpenStreetMap contributors.</li>
+</ul>
+</div>
+</section>
+
 <p class="back bottom-back"><a href="../index.html#work">← Back to work</a></p>
 </main>
 <footer class="site-footer" id="contact"><div class="container footer-inner">
 <span>© 2026 Hinoto Tanaka</span>
-
 </div></footer>
 </body></html>
