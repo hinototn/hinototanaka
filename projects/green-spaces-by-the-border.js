@@ -15,6 +15,9 @@ project({
     en: ["Pownal sits where Vermont meets New York and Massachusetts, and most of the town is still green. I mapped the large parcels with very little pavement or buildings, together with roads, nearby towns and the state lines."],
     ja: ["ポーナルは、バーモントがニューヨーク州とマサチューセッツ州に接する場所にあり、町の大半はまだ緑だ。舗装や建物がほとんどない広い区画を、道路や近くの町、州境と一緒に地図にした。"],
   },
+  // The one-line process summary shown above the sections.
+  workflow: [{ en: "Parcels", ja: "区画" }, { en: "Design", ja: "デザイン" }, { en: "Locator", ja: "位置図" }],
+
   sections: [
     {
       heading: { en: "Design", ja: "デザイン" },

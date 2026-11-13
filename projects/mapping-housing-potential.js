@@ -16,6 +16,9 @@ project({
     en: ["Vermont needs more housing, and a good place for a home is about more than available land. I looked for places in Addison County that are already residential, close to a school and within reach of a grocery store."],
     ja: ["バーモントは住宅が足りないが、住む場所として良いかどうかは、空いている土地だけでは決まらない。アディソン郡で、すでに住宅地であり、学校に近く、買い物にも行ける場所を探した。"],
   },
+  // The one-line process summary shown above the sections.
+  workflow: [{ en: "Question", ja: "問い" }, { en: "Criteria", ja: "条件" }, { en: "Overlay", ja: "重ね合わせ" }, { en: "Map", ja: "地図" }],
+
   sections: [
     {
       heading: { en: "Method", ja: "方法" },

@@ -77,6 +77,7 @@ function project(p) {
         ${p.facts.map((f) => `<dt>${f.label[lang]}</dt><dd>${f.text[lang]}</dd>`).join('')}
       </dl>
       ${p.about[lang].map((t) => `<p>${t}</p>`).join('')}
+      ${p.workflow ? `<p class="workflow"><span>${lang === 'ja' ? '制作の流れ' : 'Process'}</span>${p.workflow.map((w) => w[lang]).join(' → ')}</p>` : ''}
       ${p.sections.map(section).join('')}
       ${p.sources.length ? `<section class="sources"><h2>${words[lang].sources}</h2>
         <ul>${p.sources.map((s) => `<li>${s[lang]}</li>`).join('')}</ul></section>` : ''}
