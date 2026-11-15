@@ -2,7 +2,7 @@
 // Every project uses this one template. The address says which project to show,
 // e.g. project.html?id=okinawa-twice-colonized. I load projects/<id>.js, which
 // calls project({ … }) below with that project's text and images.
-// The title, subtitle and year come from js/projects.js, so they live in one place.
+// The title comes from js/projects.js, so it lives in one place.
 
 const lang = document.documentElement.lang === 'ja' ? 'ja' : 'en';
 const root = lang === 'ja' ? '../' : '';   // the Japanese pages live one folder down
@@ -73,11 +73,10 @@ function project(p) {
     ${hero(p.hero)}
     <div class="prose">
       <dl class="facts">
-        <dt>${lang === 'ja' ? '年' : 'Year'}</dt><dd>${info.year}</dd>
         ${p.facts.map((f) => `<dt>${f.label[lang]}</dt><dd>${f.text[lang]}</dd>`).join('')}
+        ${p.workflow ? `<dt>${lang === 'ja' ? '制作の流れ' : 'Process'}</dt><dd>${p.workflow.map((w) => w[lang]).join(' → ')}</dd>` : ''}
       </dl>
-      ${p.about[lang].map((t) => `<p>${t}</p>`).join('')}
-      ${p.workflow ? `<p class="workflow"><span>${lang === 'ja' ? '制作の流れ' : 'Process'}</span>${p.workflow.map((w) => w[lang]).join(' → ')}</p>` : ''}
+      ${p.about ? p.about[lang].map((t) => `<p>${t}</p>`).join('') : ''}
       ${p.sections.map(section).join('')}
       ${p.sources.length ? `<section class="sources"><h2>${words[lang].sources}</h2>
         <ul>${p.sources.map((s) => `<li>${s[lang]}</li>`).join('')}</ul></section>` : ''}
