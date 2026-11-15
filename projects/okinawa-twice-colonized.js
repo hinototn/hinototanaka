@@ -5,8 +5,8 @@
 project({
   // The line under the title.
   intro: {
-    en: "Revealing the human and environmental costs of Japanese annexation and U.S. militarization in Okinawa",
-    ja: "日本による併合と米軍の駐留が、沖縄の人と環境に残した代償を描く",
+    en: "The Lasting Scars of U.S. Militarization",
+    ja: "沖縄に刻まれた米軍の影",
   },
 
   // The big map at the top, with the Japanese edition as a second version.
