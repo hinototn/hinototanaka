@@ -13,5 +13,4 @@ document.getElementById('project-grid').innerHTML = projects.map((p) => `
     </div>
     <h3>${p.title[lang]}</h3>
     <p class="project-subtitle">${p.subtitle[lang]}</p>
-    <p class="project-year">${p.year}</p>
   </a>`).join('');

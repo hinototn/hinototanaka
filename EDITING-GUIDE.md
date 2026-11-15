@@ -10,7 +10,7 @@ ja/about.html          Japanese About page
 project.html           English project page: one template for every project
 ja/project.html        Japanese project page: same template
 css/styles.css         all styling; fonts and colors at the top
-js/projects.js         my project list: order, titles, subtitles, years, thumbnails
+js/projects.js         my project list: order, titles, subtitles, thumbnails (years are kept but not shown)
 js/home.js             builds the homepage cards from js/projects.js
 js/project.js          builds a project page from its file in projects/
 projects/<id>.js       one file per project, with English and Japanese side by side
@@ -22,9 +22,9 @@ images/projects/       full maps and process images
 Open `projects/<id>.js`. Every piece of text has an `en:` and a `ja:` version next to each other. A project has:
 - `intro`: the line under the title
 - `hero`: the big map at the top
-- `facts`: the short list (Context, Team, Tools, Data). The year is added automatically.
-- `about`: a paragraph or two
-- `workflow`: the one-line process summary (e.g. Sketches → Data → Layout)
+- `facts`: the short list (Context, Team, Tools…)
+- `workflow`: the process steps (e.g. Sketches → Data → Layout), shown as the last "Process" row of the facts
+- `about`: optional paragraphs between the facts and the first section (no project uses it right now)
 - `sections`: each has a `heading`, `text` (a list of paragraphs) and optional `images`
 - `sources`
 
