@@ -1,10 +1,10 @@
 # Portfolio redesign — complete context for Claude Code
 
-**Use this as the single-file handoff for the existing GitHub repository `hinototn/hinototanaka`.**
+**Use this as the single-file handoff for the existing GitHub repository `hinototn/hinototn.github.io`.**
 
 This document combines all written instructions, project inventories, and planning material assembled for the user. It does **not** contain binary image assets or a copy of the current site code. Read the existing repository for code and images. Do not replace current files with any historical snapshot. Begin by auditing the repository and proposing an editorial/content plan **before modifying site files**. Create changes on a new branch for review.
 
-Current site: https://hinototn.github.io/hinototanaka/
+Current site: https://hinototn.github.io/
 WordPress archive: https://hinototanaka.wordpress.com/
 
 ---
@@ -22,9 +22,9 @@ Read `docs/portfolio/brief.md`, `roadmap.md`, `project-inventory.md`, `user-edit
 - Never fabricate skills, collaborators, citations, research findings, data sources, publication dates, or links. Mark unknown details as `NEEDS CONFIRMATION` and ask.
 
 ## Technical constraints
-- Static GitHub Pages site at `https://hinototn.github.io/hinototanaka/`. Repository: `hinototn/hinototanaka`.
+- Static GitHub Pages site at `https://hinototn.github.io/`. Repository: `hinototn/hinototn.github.io`.
 - Preserve bilingual EN/日本語 functionality throughout ALL pages (including metadata, project cards, captions, navigation, links). Maintain language on switching page-to-page.
-- Preserve relative URLs so the site works under `/hinototanaka/`, not only at domain root. No custom domain until one is purchased and DNS is set.
+- Keep URLs relative (e.g. `./`, `../`, `images/…`) so the site works from any folder, including locally. The site now lives at the domain root (the repository was renamed from `hinototanaka` in Nov 2026; the old `/hinototanaka/` address no longer works). No custom domain until one is purchased and DNS is set.
 - Keep code light; prefer plain HTML/CSS/vanilla JS. Do not add React, build systems, frameworks, analytics, forms, or external dependencies without discussing a specific need.
 - Keep images high quality but web-optimized. Homepage thumbs consistent ratio; full artwork on project pages not cropped.
 - Preserve existing personal stamp, quiet satsumaimo-purple accent (`#744B59`), Helvetica-like type, restrained whitespace and minimal navigation. No separate About/Contact page unless user explicitly changes preference; contact info can live in introduction/footer.
@@ -86,8 +86,8 @@ Comprehensive doesn't mean the homepage needs to be exhaustive in visual weight.
 - Duplicating all content twice by hand if a simple manageable bilingual content structure can keep it synchronized. However prioritize no-build local editing; discuss before refactoring.
 
 ## Existing links
-- Current website: https://hinototn.github.io/hinototanaka/
-- Repository: https://github.com/hinototn/hinototanaka
+- Current website: https://hinototn.github.io/
+- Repository: https://github.com/hinototn/hinototn.github.io
 - WordPress (richer source text): https://hinototanaka.wordpress.com/
 - Interactive Kollektiv map: https://hinototn.github.io/kollektiv-denmark-interactive-map/
 - LinkedIn: https://www.linkedin.com/in/hinoto-tanaka/
@@ -453,7 +453,7 @@ JA: `基地の境界に10m解像度の土地被覆とサンゴ礁のデータを
 
 ## Phase 0 — verify first (no edits)
 - Inspect current GitHub files, not the local snapshot. Record current homepage, actual list order, descriptions, group rendering, translation files, main branch and live Pages configuration.
-- Confirm that `index.html`, `ja/index.html`, relative asset paths and .nojekyll are in the publishing root; test direct navigation to Japanese project routes under `/hinototanaka/`.
+- Confirm that `index.html`, `ja/index.html`, relative asset paths and .nojekyll are in the publishing root; test direct navigation to Japanese project routes (e.g. `/ja/project.html?id=…`).
 - Audit each project against the WordPress content, local image library and actual published map work; flag missing information and credits.
 - Present proposed order and sample content for approval.
 
@@ -481,7 +481,7 @@ JA: `基地の境界に10m解像度の土地被覆とサンゴ礁のデータを
 ## Phase 5 — quality / maintenance
 - Make content editing self-explanatory for a noncoder; document single source of truth and how to add EN/JP projects.
 - Verify every route and image; keyboard/mobile; SEO titles/meta/og images, image alt text; direct deep linking; no dependency on localhost root paths.
-- Before merging PR: screenshot-test home, a project page, JP home, JP project page on phone and desktop; verify the `hinototanaka` Pages base path.
+- Before merging PR: screenshot-test home, a project page, JP home, JP project page on phone and desktop; verify the site loads at https://hinototn.github.io/.
 - Preserve current custom domain settings; do not type an unowned domain into Pages.
 
 
@@ -498,7 +498,7 @@ JA: `基地の境界に10m解像度の土地被覆とサンゴ礁のデータを
 - [ ] For each project, credible role, year, methods/software, key design choices, deliverables, credits; no invented details.
 - [ ] EN and JP home + corresponding project pages switch to the same item, captions, alt text and navigation translated.
 - [ ] JP phrasing plain-form (no です/ます); meaning preserved.
-- [ ] Images load under `/hinototanaka/`, homepage tiles all 4:3, project maps fully visible; alt text meaningful.
+- [ ] Images load at https://hinototn.github.io/, homepage tiles all 4:3, project maps fully visible; alt text meaningful.
 - [ ] Test internal links and case-sensitive file paths, including `ja/projects/...` direct URLs.
 - [ ] Mobile/desktop appearance and keyboard focus states/skip links checked.
 - [ ] Page remains lightweight, readable and accessible without adding build tools unless approved.

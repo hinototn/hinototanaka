@@ -2,7 +2,7 @@
 
 ## Phase 0 — verify first (no edits)
 - Inspect current GitHub files, not the local snapshot. Record current homepage, actual list order, descriptions, group rendering, translation files, main branch and live Pages configuration.
-- Confirm that `index.html`, `ja/index.html`, relative asset paths and .nojekyll are in the publishing root; test direct navigation to Japanese project routes under `/hinototanaka/`.
+- Confirm that `index.html`, `ja/index.html`, relative asset paths and .nojekyll are in the publishing root; test direct navigation to Japanese project routes (e.g. `/ja/project.html?id=…`).
 - Audit each project against the WordPress content, local image library and actual published map work; flag missing information and credits.
 - Present proposed order and sample content for approval.
 
@@ -30,5 +30,5 @@
 ## Phase 5 — quality / maintenance
 - Make content editing self-explanatory for a noncoder; document single source of truth and how to add EN/JP projects.
 - Verify every route and image; keyboard/mobile; SEO titles/meta/og images, image alt text; direct deep linking; no dependency on localhost root paths.
-- Before merging PR: screenshot-test home, a project page, JP home, JP project page on phone and desktop; verify the `hinototanaka` Pages base path.
+- Before merging PR: screenshot-test home, a project page, JP home, JP project page on phone and desktop; verify the site loads at https://hinototn.github.io/.
 - Preserve current custom domain settings; do not type an unowned domain into Pages.

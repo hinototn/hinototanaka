@@ -7,7 +7,7 @@
 - [ ] For each project, credible role, year, methods/software, key design choices, deliverables, credits; no invented details.
 - [ ] EN and JP home + corresponding project pages switch to the same item, captions, alt text and navigation translated.
 - [ ] JP phrasing plain-form (no です/ます); meaning preserved.
-- [ ] Images load under `/hinototanaka/`, homepage tiles all 4:3, project maps fully visible; alt text meaningful.
+- [ ] Images load at https://hinototn.github.io/, homepage tiles all 4:3, project maps fully visible; alt text meaningful.
 - [ ] Test internal links and case-sensitive file paths, including `ja/projects/...` direct URLs.
 - [ ] Mobile/desktop appearance and keyboard focus states/skip links checked.
 - [ ] Page remains lightweight, readable and accessible without adding build tools unless approved.
