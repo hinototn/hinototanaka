@@ -44,6 +44,8 @@ img { max-width: 100%; height: auto; display: block; }
 .container { width: min(1080px, calc(100% - 48px)); margin-inline: auto; }
 .skip-link { position: absolute; left: 14px; top: -100px; background: #fff; padding: 8px; }
 .skip-link:focus { top: 8px; }
+/* Hidden on screen but still read by screen readers. */
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 ::selection { background: var(--accent-soft); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
@@ -142,10 +144,9 @@ figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top:
 
 /* ---------- About page ---------- */
 .about-page { padding-top: 45px; }
-/* "About" across the top; below it the photo on the left and my text on the right, starting on the same line.
+/* The photo on the left and my text on the right, starting on the same line.
    The photo column shrinks on narrower screens so the text never gets squeezed. */
 .about { display: grid; grid-template-columns: min(360px, 38%) 1fr; gap: 24px clamp(28px, 5vw, 48px); max-width: 940px; margin: 0 auto; padding: 30px 0 90px; }
-.about h1 { grid-column: 1 / -1; margin: 0; }
 /* align-self: start keeps the photo's frame the size of the photo, so the note sits right under it.
    The small top margin lines the photo's top edge up with the tops of the letters in my first line. */
 .about-photo { margin: .4em 0 0; position: relative; align-self: start; outline-offset: 4px; }
