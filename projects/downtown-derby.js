@@ -11,7 +11,7 @@ project({
     caption: { en: "Housing in buildings with 50 or more units.", ja: "50戸以上の建物にある住宅。" },
   },
   facts: [
-    { label: { en: "Context", ja: "背景" }, text: { en: "Project for Urban Geography (GEOG 0100), Middlebury College", ja: "ミドルベリー大学の授業「Urban Geography（GEOG 0100）」の課題" } },
+    { label: { en: "Context", ja: "背景" }, text: { en: "Project for Place and Society (GEOG 0100), Middlebury College", ja: "ミドルベリー大学の授業「Place and Society（GEOG 0100）」の課題" } },
     { label: { en: "Tools", ja: "ツール" }, text: { en: "Social Explorer, OpenStreetMap", ja: "Social Explorer、OpenStreetMap" } },
   ],
   // The process line, shown as the last row of the facts above.
@@ -21,8 +21,8 @@ project({
     {
       heading: { en: "Census data", ja: "国勢調査データ" },
       text: {
-        en: ["While in Louisville for NACIS 2025, I took the opportunity to study downtown Louisville, specifically Census Tract 49, for my Urban Geography course. I began by examining demographic and housing data from the 2023 American Community Survey, comparing the tract with Jefferson County and Kentucky. Several figures stood out, particularly the high population density, the 22.8% housing vacancy rate, and the fact that 68% of housing units were in buildings containing 50 or more units, compared with less than 5% at both the county and state levels."],
-        ja: ["NACIS 2025でルイビルに行った機会に、都市地理学の授業の課題として、ルイビルのダウンタウン、具体的には国勢調査区49を調べた。まず2023年の米国コミュニティ調査から人口と住宅のデータを見て、ジェファーソン郡やケンタッキー州と比べた。目立った数字がいくつかあった。とくに人口密度の高さ、22.8%という住宅の空き家率、そして住宅の68%が50戸以上の建物にあること（郡と州ではどちらも5%未満）だ。"],
+        en: ["While in Louisville for NACIS 2025, I took the opportunity to study downtown Louisville, specifically Census Tract 49, for my Place and Society course. I began by examining demographic and housing data from the 2023 American Community Survey, comparing the tract with Jefferson County and Kentucky. Several figures stood out, particularly the high population density, the 22.8% housing vacancy rate, and the fact that 68% of housing units were in buildings containing 50 or more units, compared with less than 5% at both the county and state levels."],
+        ja: ["NACIS 2025でルイビルに行った機会に、授業「Place and Society」の課題として、ルイビルのダウンタウン、具体的には国勢調査区49を調べた。まず2023年の米国コミュニティ調査から人口と住宅のデータを見て、ジェファーソン郡やケンタッキー州と比べた。目立った数字がいくつかあった。とくに人口密度の高さ、22.8%という住宅の空き家率、そして住宅の68%が50戸以上の建物にあること（郡と州ではどちらも5%未満）だ。"],
       },
     },
     {
