@@ -9,9 +9,9 @@ Read `docs/portfolio/brief.md`, `roadmap.md`, `project-inventory.md`, `user-edit
 - Never fabricate skills, collaborators, citations, research findings, data sources, publication dates, or links. Mark unknown details as `NEEDS CONFIRMATION` and ask.
 
 ## Technical constraints
-- Static GitHub Pages site at `https://hinototn.github.io/hinototanaka/`. Repository: `hinototn/hinototanaka`.
+- Static GitHub Pages site at `https://hinototn.github.io/`. Repository: `hinototn/hinototn.github.io`.
 - Preserve bilingual EN/日本語 functionality throughout ALL pages (including metadata, project cards, captions, navigation, links). Maintain language on switching page-to-page.
-- Preserve relative URLs so the site works under `/hinototanaka/`, not only at domain root. No custom domain until one is purchased and DNS is set.
+- Keep URLs relative (e.g. `./`, `../`, `images/…`) so the site works from any folder, including locally. The site now lives at the domain root (the repository was renamed from `hinototanaka` in Nov 2026; the old `/hinototanaka/` address no longer works). No custom domain until one is purchased and DNS is set.
 - Keep code light; prefer plain HTML/CSS/vanilla JS. Do not add React, build systems, frameworks, analytics, forms, or external dependencies without discussing a specific need.
 - Keep images high quality but web-optimized. Homepage thumbs consistent ratio; full artwork on project pages not cropped.
 - Preserve existing personal stamp, quiet satsumaimo-purple accent (`#744B59`), Helvetica-like type, restrained whitespace and minimal navigation. No separate About/Contact page unless user explicitly changes preference; contact info can live in introduction/footer.

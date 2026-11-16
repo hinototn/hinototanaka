@@ -37,8 +37,8 @@ Comprehensive doesn't mean the homepage needs to be exhaustive in visual weight.
 - Duplicating all content twice by hand if a simple manageable bilingual content structure can keep it synchronized. However prioritize no-build local editing; discuss before refactoring.
 
 ## Existing links
-- Current website: https://hinototn.github.io/hinototanaka/
-- Repository: https://github.com/hinototn/hinototanaka
+- Current website: https://hinototn.github.io/
+- Repository: https://github.com/hinototn/hinototn.github.io
 - WordPress (richer source text): https://hinototanaka.wordpress.com/
 - Interactive Kollektiv map: https://hinototn.github.io/kollektiv-denmark-interactive-map/
 - LinkedIn: https://www.linkedin.com/in/hinoto-tanaka/
