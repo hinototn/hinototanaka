@@ -1,18 +1,17 @@
 // MY PROJECT LIST
 // This is the one place where the homepage gets its cards, and where each
-// project page gets its title. The order here is the order on the homepage,
-// so I keep the most important projects at the top.
+// project page gets its title.
 //
 // Each project has:
 //   id        – the name of its content file in projects/ (projects/<id>.js)
-//   year      – shown under the subtitle; "More work" is sorted by it, newest first
-//   tools     – the small tags next to the year on the homepage card
-//   selected  – true puts the project in the "Selected work" row at the top (I keep it to three)
+//   selected  – true puts it in the "Selected work" row at the top (I keep it to three)
+//   year      – shown on the card; "More work" is sorted by it, newest first
+//   tools     – the small tags next to the year on the card
+//   thumb     – the 4:3 homepage thumbnail in images/thumbs/ (1200 × 900)
+//   title, subtitle, thumbAlt – English and Japanese side by side
 //
 // Projects from the same year keep the order below, so within 2025 I list
 // Fall 2025 projects before Spring 2025 ones (newest first).
-//   thumb     – the 4:3 homepage thumbnail in images/thumbs/ (1200 × 900)
-//   title, subtitle, thumbAlt – English and Japanese side by side
 //
 // To add a project: copy one { … } block, change it, and make projects/<id>.js.
 

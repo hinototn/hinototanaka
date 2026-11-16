@@ -53,4 +53,4 @@ My name, stamp and the ABOUT | EN / 日本語 row are written in each page's `<h
 - Broken image: check the file name and its capitalization.
 
 ## If my changes don't show up
-Browsers keep a saved copy of the CSS and JavaScript files. Each page loads them with a date on the end (e.g. `js/projects.js?v=2026-11-16`). After I change anything in `css/`, `js/` or `projects/`, I change that date to today in all six HTML pages and in `js/project.js` (search for `?v=`), and visitors get the new version right away. To check my own changes, a hard refresh also works: Cmd+Shift+R (Mac) or Ctrl+Shift+R (Windows).
+Browsers keep a saved copy of the CSS and JavaScript files. Each page loads them with a date on the end (e.g. `js/projects.js?v=2026-11-16`). After I change anything in `css/`, `js/` or `projects/`, I change that date to today in all six HTML pages (search for `?v=`; the project content files pick up the date from `project.html` automatically), and visitors get the new version right away. To check my own changes, a hard refresh also works: Cmd+Shift+R (Mac) or Ctrl+Shift+R (Windows).

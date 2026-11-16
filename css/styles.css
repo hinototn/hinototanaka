@@ -3,10 +3,8 @@
    project pages, footer, phones. */
 
 /* ---------- Fonts and colors ---------- */
-
-/* English: Helvetica Neue (built into most computers; Arial where it isn’t). */
-
-/* Japanese: Noto Sans JP (Noto Sans CJK JP) is loaded in each page's <head>. */
+/* English uses Helvetica Neue (built into most computers; Arial where it isn’t).
+   Japanese uses Noto Sans JP, loaded in each page's <head>. */
 
 :root {
   --paper: #fbfaf8;
@@ -15,29 +13,27 @@
   --line: #dedbd7;
   --accent: #744B59;   /* satsumaimo purple: Kawagoe's sweet potato */
   --accent-soft: #744b5926;   /* the same purple, very faint (for text selection) */
+  --quiet: #8a8a8a;           /* the light grey of the year and tool tags */
 
-  /* English: Helvetica Neue. Bold for titles, Medium for headings, Light for text */
-  --title-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  --heading-font: var(--title-font);
-  --text-font: var(--title-font);
+  /* One typeface everywhere: Bold for titles, Medium for headings, Light for text */
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
   --title-weight: 700;
   --heading-weight: 500;
   --text-weight: 300;
 }
 
-/* Japanese: Bold for titles, Regular for headings, Light for text */
+/* Japanese: Noto Sans JP, with Regular (not Medium) for headings */
 :root:lang(ja) {
-  --title-font: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
-  --heading-font: var(--title-font);
-  --text-font: var(--title-font);
+  --font: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", sans-serif;
   --heading-weight: 400;
 }
 
 * { box-sizing: border-box; }
-body { margin: 0; border-top: 4px solid var(--accent); background: var(--paper); color: var(--ink); font-family: var(--text-font); font-weight: var(--text-weight); font-size: 17px; line-height: 1.6; }
+body { margin: 0; border-top: 4px solid var(--accent); background: var(--paper); color: var(--ink); font-family: var(--font); font-weight: var(--text-weight); font-size: 17px; line-height: 1.6; }
 :lang(ja) body { line-height: 1.85; }
-h1, .site-name, .project h3 { font-family: var(--title-font); font-weight: var(--title-weight); }
-h2, h3, dt { font-family: var(--heading-font); font-weight: var(--heading-weight); }
+h1, .site-name, .project h3 { font-weight: var(--title-weight); }
+h2, h3, dt { font-weight: var(--heading-weight); }
+h1 { font-size: clamp(27px, 3.2vw, 34px); letter-spacing: -.02em; line-height: 1.2; }
 strong, b { font-weight: var(--heading-weight); }
 a { color: inherit; }
 a:hover { text-decoration-color: var(--accent); }
@@ -48,32 +44,27 @@ img { max-width: 100%; height: auto; display: block; }
 ::selection { background: var(--accent-soft); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
-/* ---------- Header: name, stamp, language toggle ---------- */
+/* ---------- Header: name, stamp, ABOUT | EN / 日本語 ---------- */
 .site-header { border-bottom: 1px solid var(--line); }
 .header-inner { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 23px 0 22px; }
 /* My name and stamp are the biggest thing in the header. */
-.site-name { display: inline-flex; align-items: center; gap: 14px; font-size: clamp(32px, 6vw, 44px); letter-spacing: -.01em; text-decoration: none; line-height: 1; }
+.site-name { display: inline-flex; align-items: center; gap: 14px; font-size: clamp(32px, 6vw, 44px); letter-spacing: -.01em; line-height: 1; }
 .site-name a { text-decoration: none; }
 .site-name > a:first-child:hover { color: var(--accent); }
 /* My name goes to the homepage; my stamp goes to my About page. */
 .stamp-link img { width: 58px; height: 58px; transition: transform .2s; }
-.stamp-link:hover img, .stamp-link:focus img { transform: rotate(-6deg); }
+.stamp-link:hover img, .stamp-link:focus-visible img { transform: rotate(-6deg); }
 .lang-switch { display: flex; align-items: center; gap: 10px; font-size: 13px; }
 .lang-switch a { color: var(--muted); text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; }
 .lang-switch a[aria-current="page"], .lang-switch a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .lang-divider { color: #999; }
-/* ABOUT | EN / 日本語 under my name. */
-.nav-about { letter-spacing: .06em; }
+/* ABOUT is darker than EN / 日本語 so it reads as a link; it's purple when hovered or when I'm on that page. */
+.lang-switch .nav-about { color: var(--ink); letter-spacing: .06em; }
 :lang(en) .nav-about { text-transform: uppercase; }
-.lang-switch .nav-about { color: var(--ink); }
-.lang-switch .nav-about[aria-current="page"], .lang-switch .nav-about:hover { color: var(--accent); }
 
 /* ---------- Homepage ---------- */
-h1 { font-size: clamp(27px, 3.2vw, 34px); letter-spacing: -.02em; line-height: 1.2; }
 .intro { padding: 58px 0 52px; text-align: center; }
-.intro h1 { margin: 0 0 24px; }
 .intro p { max-width: 760px; margin: 0 auto; }
-.prose a { color: var(--accent); text-underline-offset: 3px; }
 /* Contact links (LinkedIn, email): purple, no underline; they lift slightly when you point at them. */
 .contact-link { display: inline-block; color: var(--accent); text-decoration: none; transition: transform .15s; }
 .contact-link:hover, .contact-link:focus-visible { transform: translateY(-2px); }
@@ -83,25 +74,27 @@ h1 { font-size: clamp(27px, 3.2vw, 34px); letter-spacing: -.02em; line-height: 1
 
 /* Cards: 3 per row, a short last row stays centered. */
 .project-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 36px 25px; }
-.project { flex: 0 1 calc((100% - 50px) / 3); text-decoration: none; text-align: center; }
+.project { flex: 0 1 calc((100% - 50px) / 3); text-decoration: none; text-align: center; transition: transform .25s ease; }
+/* Pointing at a card (or tabbing to it) lifts the whole card a little, like the stamp's tilt. */
+.project:hover, .project:focus-visible { transform: translateY(-6px); }
 .project-image { aspect-ratio: 4 / 3; overflow: hidden; }
 .project-image img { width: 100%; height: 100%; object-fit: cover; }
 .project h3 { font-size: 16px; line-height: 1.3; margin: 12px 0 0; }
 .project:hover h3 { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 .project-subtitle { font-size: 14px; line-height: 1.4; margin: 4px 0 0; text-wrap: balance; }
-/* Year, then small outlined tags for the tools I used. */
-.project-tags { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 5px; margin: 8px 0 0; font-size: 11px; line-height: 1; }
-/* Kept light on purpose: the title and subtitle come first, these are just a quiet note. */
-.project-year { color: #8a8a8a; margin-right: 3px; }
-.tag { padding: 3px 7px; border: 1px solid #ebe8e4; border-radius: 999px; color: #8a8a8a; white-space: nowrap; }
-:lang(ja) .project-subtitle, :lang(ja) .project h3 { word-break: auto-phrase; }
+:lang(ja) .project-subtitle, :lang(ja) .project h3 { word-break: auto-phrase; }   /* don't break Japanese mid-word */
+/* Year, then small outlined tags for the tools I used. Kept light on purpose:
+   the title and subtitle come first, these are a quiet note. */
+.project-tags { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 5px; margin: 8px 0 0; font-size: 11px; line-height: 1; color: var(--quiet); }
+.project-year { margin-right: 3px; }
+.tag { padding: 3px 7px; border: 1px solid #ebe8e4; border-radius: 999px; white-space: nowrap; }
 
 /* ---------- Project pages ---------- */
 .project-page { padding: 45px 0 90px; }
 .project-page h1 { margin: 0 0 14px; text-align: center; }
 .back { font-size: 14px; margin: 0 0 34px; }
-.back a { text-decoration: none; color: var(--accent); }
-.back a:hover { color: var(--accent); text-decoration: underline; }
+.back a { color: var(--accent); text-decoration: none; }
+.back a:hover { text-decoration: underline; }
 .bottom-back { margin-top: 60px; }
 .project-intro { max-width: 720px; margin: 0 auto 34px; text-align: center; }
 
@@ -115,11 +108,12 @@ h1 { font-size: clamp(27px, 3.2vw, 34px); letter-spacing: -.02em; line-height: 1
 
 /* The writing sits in one centered column. */
 .prose { max-width: 700px; margin-inline: auto; }
+.prose a { color: var(--accent); text-underline-offset: 3px; }
 .prose p { margin: 0 0 16px; }
 .prose section { margin-top: 44px; }
 .prose h2 { font-size: 20px; margin: 0 0 12px; color: var(--accent); }
 
-/* Quick facts at the top: small grey labels on the left. */
+/* Quick facts at the top: small purple labels on the left. */
 .facts { display: grid; grid-template-columns: 7em 1fr; gap: 8px 20px; margin: 0 0 32px; padding: 18px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 15px; }
 .facts dt { color: var(--accent); font-size: 13px; padding-top: 2px; }
 .facts dd { margin: 0; }
@@ -140,7 +134,6 @@ figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top:
 .swatches li { display: flex; align-items: center; gap: 7px; }
 .swatches span { width: 30px; height: 20px; border-radius: 2px; }
 
-
 .sources ul { font-size: 14px; padding-left: 18px; }
 .sources li { margin-bottom: 6px; }
 
@@ -148,7 +141,7 @@ figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top:
 .about-page { padding-top: 45px; }
 /* Photo on the left; my text on the right, the same height as the photo. */
 .about { display: grid; grid-template-columns: 360px 1fr; gap: 48px; align-items: stretch; max-width: 940px; margin: 0 auto; padding: 30px 0 90px; }
-.about-photo { margin: 0; outline-offset: 4px; }
+.about-photo { margin: 0; position: relative; outline-offset: 4px; }
 .about-photo img { width: 100%; aspect-ratio: 1; object-fit: cover; }
 .about-text { display: flex; flex-direction: column; }
 .about h1 { margin: 0 0 18px; }
@@ -164,15 +157,19 @@ figcaption { color: var(--muted); font-size: 13px; line-height: 1.5; margin-top:
 .about-photo:hover .hover-note, .about-photo:focus .hover-note,
 .signoff:hover .hover-note, .signoff:focus .hover-note { opacity: 1; }
 .signoff .hover-note { position: absolute; right: 0; top: 100%; width: 260px; text-align: right; }
-.about-photo { position: relative; }
 .about-photo .hover-note { position: absolute; left: 0; top: 100%; }
 /* Phones can't hover, so the notes are always shown there. */
 @media (hover: none) { .hover-note { opacity: 1; } }
-.about a:not(.contact-link) { color: var(--accent); text-underline-offset: 3px; }
 
 /* ---------- Footer ---------- */
 .site-footer { border-top: 1px solid var(--line); }
 .footer-inner { display: flex; justify-content: center; padding: 25px 0 30px; font-size: 13px; color: var(--muted); }
+
+/* ---------- Motion ---------- */
+/* People who turn on "reduce motion" on their computer or phone get no lifts or tilts. */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; }
+}
 
 /* ---------- Tablets and phones ---------- */
 @media (max-width: 800px) {
