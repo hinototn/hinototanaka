@@ -13,7 +13,7 @@
   --line: #dedbd7;
   --accent: #744B59;   /* satsumaimo purple: Kawagoe's sweet potato */
   --accent-soft: #744b5926;   /* the same purple, very faint (for text selection) */
-  --quiet: #8a8a8a;           /* the light grey of the year and tool tags */
+  --quiet: #a6a6a6;           /* the light grey of the year and tool tags */
 
   /* How everything that moves on hover moves: slowly, starting quick and easing to a soft stop. */
   --move: .45s cubic-bezier(.22, .61, .36, 1);
@@ -90,7 +90,7 @@ img { max-width: 100%; height: auto; display: block; }
    the title and subtitle come first, these are a quiet note. */
 .project-tags { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 5px; margin: 8px 0 0; font-size: 11px; line-height: 1; color: var(--quiet); }
 .project-year { margin-right: 3px; }
-.tag { padding: 3px 7px; border: 1px solid #ebe8e4; border-radius: 999px; white-space: nowrap; }
+.tag { padding: 3px 7px; border: 1px solid #efedea; border-radius: 999px; white-space: nowrap; }
 
 /* ---------- Project pages ---------- */
 .project-page { padding: 45px 0 90px; }
