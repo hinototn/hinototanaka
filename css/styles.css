@@ -13,7 +13,8 @@
   --ink: #262626;
   --muted: #666;
   --line: #dedbd7;
-  --accent: #744B59;   /* satsumaimo purple */
+  --accent: #744B59;   /* satsumaimo purple: Kawagoe's sweet potato */
+  --accent-soft: #744b5926;   /* the same purple, very faint (for text selection) */
 
   /* English: Helvetica Neue. Bold for titles, Medium for headings, Light for text */
   --title-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -33,7 +34,7 @@
 }
 
 * { box-sizing: border-box; }
-body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--text-font); font-weight: var(--text-weight); font-size: 17px; line-height: 1.6; }
+body { margin: 0; border-top: 4px solid var(--accent); background: var(--paper); color: var(--ink); font-family: var(--text-font); font-weight: var(--text-weight); font-size: 17px; line-height: 1.6; }
 :lang(ja) body { line-height: 1.85; }
 h1, .site-name, .project h3 { font-family: var(--title-font); font-weight: var(--title-weight); }
 h2, h3, dt { font-family: var(--heading-font); font-weight: var(--heading-weight); }
@@ -44,6 +45,7 @@ img { max-width: 100%; height: auto; display: block; }
 .container { width: min(1080px, calc(100% - 48px)); margin-inline: auto; }
 .skip-link { position: absolute; left: 14px; top: -100px; background: #fff; padding: 8px; }
 .skip-link:focus { top: 8px; }
+::selection { background: var(--accent-soft); }
 :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
 
 /* ---------- Header: name, stamp, language toggle ---------- */
@@ -98,7 +100,7 @@ h1 { font-size: clamp(27px, 3.2vw, 34px); letter-spacing: -.02em; line-height: 1
 .project-page { padding: 45px 0 90px; }
 .project-page h1 { margin: 0 0 14px; text-align: center; }
 .back { font-size: 14px; margin: 0 0 34px; }
-.back a { text-decoration: none; }
+.back a { text-decoration: none; color: var(--accent); }
 .back a:hover { color: var(--accent); text-decoration: underline; }
 .bottom-back { margin-top: 60px; }
 .project-intro { max-width: 720px; margin: 0 auto 34px; text-align: center; }
@@ -115,11 +117,11 @@ h1 { font-size: clamp(27px, 3.2vw, 34px); letter-spacing: -.02em; line-height: 1
 .prose { max-width: 700px; margin-inline: auto; }
 .prose p { margin: 0 0 16px; }
 .prose section { margin-top: 44px; }
-.prose h2 { font-size: 20px; margin: 0 0 12px; }
+.prose h2 { font-size: 20px; margin: 0 0 12px; color: var(--accent); }
 
 /* Quick facts at the top: small grey labels on the left. */
 .facts { display: grid; grid-template-columns: 7em 1fr; gap: 8px 20px; margin: 0 0 32px; padding: 18px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); font-size: 15px; }
-.facts dt { color: var(--muted); font-size: 13px; padding-top: 2px; }
+.facts dt { color: var(--accent); font-size: 13px; padding-top: 2px; }
 .facts dd { margin: 0; }
 
 /* Process images stay small and support the text:
