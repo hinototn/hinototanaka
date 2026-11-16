@@ -96,7 +96,7 @@ document.querySelectorAll('.lang-switch a[hreflang]').forEach((a) => { a.href +=
 // Load this project's content file (or say it doesn't exist).
 if (info) {
   const script = document.createElement('script');
-  script.src = `${root}projects/${id}.js`;
+  script.src = `${root}projects/${id}.js?v=2026-11-16`;   // update this date after editing project files, so browsers load the new version
   document.body.appendChild(script);
 } else {
   main.innerHTML = `<p class="project-intro">${words[lang].notFound} <a href="./">←</a></p>`;
