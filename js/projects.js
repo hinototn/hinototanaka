@@ -7,6 +7,9 @@
 //   id        – the name of its content file in projects/ (projects/<id>.js)
 //   year      – shown under the subtitle; "More work" is sorted by it, newest first
 //   selected  – true puts the project in the "Selected work" row at the top (I keep it to three)
+//
+// Projects from the same year keep the order below, so within 2025 I list
+// Fall 2025 projects before Spring 2025 ones (newest first).
 //   thumb     – the 4:3 homepage thumbnail in images/thumbs/ (1200 × 900)
 //   title, subtitle, thumbAlt – English and Japanese side by side
 //
@@ -32,14 +35,6 @@ const projects = [
     thumbAlt: { en: "The Danish Kollektiver NACIS map, showing housing types across Copenhagen with hand-drawn architectural scenes", ja: "コペンハーゲンの共同生活の住まいを、手描きの建物とともに示した地図" },
   },
   {
-    id: "mapping-housing-potential",
-    year: "2026",
-    thumb: "mapping-housing-potential.webp",
-    title:    { en: "Mapping Housing Potential", ja: "住宅の可能性を地図にする" },
-    subtitle: { en: "Tackling Addison County’s Housing Crisis", ja: "アディソン郡の住宅不足に向き合う" },
-    thumbAlt: { en: "Map of Addison County showing candidate housing development zones hatched pink, schools, stores, and wetlands", ja: "アディソン郡の住宅候補地をピンクの斜線で示し、学校、店、湿地を重ねた地図" },
-  },
-  {
     id: "re-drawing-voting-access",
     selected: true,
     year: "2025",
@@ -57,14 +52,6 @@ const projects = [
     thumbAlt: { en: "Chicago census tracts shaded by redlining index, with stronger red values across parts of the South and West Sides", ja: "シカゴのレッドライニング指標を地区ごとに赤で示した地図" },
   },
   {
-    id: "green-spaces-by-the-border",
-    year: "2026",
-    thumb: "green-spaces-by-the-border.webp",
-    title:    { en: "Green Spaces by the Border", ja: "州境に広がる緑" },
-    subtitle: { en: "Land Development in Pownal, VT", ja: "バーモント州ポーナルの土地開発" },
-    thumbAlt: { en: "Town of Pownal Vermont green-space and parcel map with roads, forested parcels and a locator globe", ja: "バーモント州ポーナルの緑地と土地の区画を示した地図。道路と地球儀の位置図付き" },
-  },
-  {
     id: "mapping-the-gaps",
     year: "2025",
     thumb: "mapping-the-gaps.webp",
@@ -74,11 +61,35 @@ const projects = [
   },
   {
     id: "lines-of-power",
-    year: "2026",
+    year: "2025",
     thumb: "lines-of-power.webp",
     title:    { en: "Partisan Gerrymandering", ja: "党派的ゲリマンダー" },
     subtitle: { en: "Congressional Redistricting in California", ja: "カリフォルニア州の下院選挙区割り" },
     thumbAlt: { en: "Side-by-side maps showing Republican vote percentages under 2021 and AB 604 California congressional districts", ja: "カリフォルニアの2021年とAB 604案の選挙区で共和党の得票率を比べた地図" },
+  },
+  {
+    id: "downtown-derby",
+    year: "2025",
+    thumb: "downtown-derby.webp",
+    title:    { en: "Downtown Louisville", ja: "ルイビルのダウンタウン" },
+    subtitle: { en: "Urban Geography Through Field Observation", ja: "現地観察から見る都市地理" },
+    thumbAlt: { en: "Orange choropleth showing areas with 50 or more housing units in central Louisville", ja: "ルイビル中心部で住宅50戸以上の地区をオレンジ色で示した地図" },
+  },
+  {
+    id: "mapping-housing-potential",
+    year: "2025",
+    thumb: "mapping-housing-potential.webp",
+    title:    { en: "Mapping Housing Potential", ja: "住宅の可能性を地図にする" },
+    subtitle: { en: "Tackling Addison County’s Housing Crisis", ja: "アディソン郡の住宅不足に向き合う" },
+    thumbAlt: { en: "Map of Addison County showing candidate housing development zones hatched pink, schools, stores, and wetlands", ja: "アディソン郡の住宅候補地をピンクの斜線で示し、学校、店、湿地を重ねた地図" },
+  },
+  {
+    id: "green-spaces-by-the-border",
+    year: "2025",
+    thumb: "green-spaces-by-the-border.webp",
+    title:    { en: "Green Spaces by the Border", ja: "州境に広がる緑" },
+    subtitle: { en: "Land Development in Pownal, VT", ja: "バーモント州ポーナルの土地開発" },
+    thumbAlt: { en: "Town of Pownal Vermont green-space and parcel map with roads, forested parcels and a locator globe", ja: "バーモント州ポーナルの緑地と土地の区画を示した地図。道路と地球儀の位置図付き" },
   },
   {
     id: "map-design",
@@ -87,13 +98,5 @@ const projects = [
     title:    { en: "Cartographic Studies", ja: "地図表現の練習" },
     subtitle: { en: "Symbolization and Typography", ja: "記号と文字" },
     thumbAlt: { en: "Symbol pattern sheet showing twelve vector cartographic symbol recreations and accompanying techniques", ja: "12種類の地図記号をベクターで再現し、作り方をまとめたシート" },
-  },
-  {
-    id: "downtown-derby",
-    year: "2026",
-    thumb: "downtown-derby.webp",
-    title:    { en: "Downtown Louisville", ja: "ルイビルのダウンタウン" },
-    subtitle: { en: "Urban Geography Through Field Observation", ja: "現地観察から見る都市地理" },
-    thumbAlt: { en: "Orange choropleth showing areas with 50 or more housing units in central Louisville", ja: "ルイビル中心部で住宅50戸以上の地区をオレンジ色で示した地図" },
   },
 ];
