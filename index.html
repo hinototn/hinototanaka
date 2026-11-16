@@ -21,10 +21,13 @@
 </header>
 <main class="container home-main" id="main">
 <section class="intro"><p>Hello! I am a Geography student at Middlebury College, where my work involves cartography, GIS, and spatial analysis. I’m interested in all kinds of visual storytelling, particularly where geographic research and design come together. Feel free to reach out via <a class="contact-link" href="https://www.linkedin.com/in/hinoto-tanaka/" rel="noopener noreferrer" target="_blank">LinkedIn</a> or <a class="contact-link" href="mailto:hinoto.max.tanaka@gmail.com">email</a>.</p></section>
-<section class="work" id="work" aria-labelledby="work-heading">
-<!-- js/home.js fills this grid from my list in js/projects.js. -->
-<h2 id="work-heading">Work</h2>
-<div class="project-grid" id="project-grid"></div>
+<section class="work" id="work">
+<!-- js/home.js fills both grids from my list in js/projects.js:
+     projects marked selected: true go in the first grid, the rest go below, newest first. -->
+<h2 id="selected-heading">Selected work</h2>
+<div class="project-grid" id="selected-grid" aria-labelledby="selected-heading"></div>
+<h2 id="more-heading">More work</h2>
+<div class="project-grid" id="more-grid" aria-labelledby="more-heading"></div>
 </section>
 </main>
 <footer class="site-footer" id="contact"><div class="container footer-inner">

@@ -10,7 +10,7 @@ ja/about.html          Japanese About page
 project.html           English project page: one template for every project
 ja/project.html        Japanese project page: same template
 css/styles.css         all styling; fonts and colors at the top
-js/projects.js         my project list: order, titles, subtitles, thumbnails (years are kept but not shown)
+js/projects.js         my project list: order, titles, subtitles, years, thumbnails, which three are “selected”
 js/home.js             builds the homepage cards from js/projects.js
 js/project.js          builds a project page from its file in projects/
 projects/<id>.js       one file per project, with English and Japanese side by side
@@ -31,7 +31,7 @@ Open `projects/<id>.js`. Every piece of text has an `en:` and a `ja:` version ne
 Images in a section stay small on purpose: one is centered, two sit side by side, three or more make a grid.
 
 ## Reorder projects, or change a title, subtitle or thumbnail
-Open `js/projects.js`. The homepage shows projects in exactly this order.
+Open `js/projects.js`. Projects with `selected: true` make up the “Selected work” row, in the order listed (I keep it to three). Everything else appears under “More work”, newest year first; projects from the same year keep their order in the file.
 
 ## Add a project
 1. Put its images in `images/projects/` and a 1200 × 900 thumbnail in `images/thumbs/`.
