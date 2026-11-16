@@ -6,6 +6,7 @@
 // Each project has:
 //   id        – the name of its content file in projects/ (projects/<id>.js)
 //   year      – shown under the subtitle; "More work" is sorted by it, newest first
+//   tools     – the small tags next to the year on the homepage card
 //   selected  – true puts the project in the "Selected work" row at the top (I keep it to three)
 //
 // Projects from the same year keep the order below, so within 2025 I list
@@ -20,6 +21,7 @@ const projects = [
     id: "okinawa-twice-colonized",
     selected: true,
     year: "2025",
+    tools: ["QGIS", "Google Earth Engine", "Adobe Illustrator"],
     thumb: "okinawa-twice-colonized.webp",
     title:    { en: "Okinawa, Twice Colonized", ja: "沖縄・支配下に置かれている島" },
     subtitle: { en: "The Lasting Scars of U.S. Militarization", ja: "米軍基地が残す傷あと" },
@@ -29,6 +31,7 @@ const projects = [
     id: "the-danish-kollektiv",
     selected: true,
     year: "2026",
+    tools: ["Excel", "QGIS", "Adobe Illustrator", "Leaflet"],
     thumb: "the-danish-kollektiv.webp",
     title:    { en: "The Danish Kollektiv", ja: "デンマークのコレクティブ" },
     subtitle: { en: "Collective Living Across Copenhagen", ja: "コペンハーゲンに広がる共同生活" },
@@ -38,6 +41,7 @@ const projects = [
     id: "re-drawing-voting-access",
     selected: true,
     year: "2025",
+    tools: ["Excel", "QGIS", "QuickOSM"],
     thumb: "re-drawing-voting-access.webp",
     title:    { en: "Re-Drawing Voting Access", ja: "投票所への道を引き直す" },
     subtitle: { en: "Polling-Place Accessibility in Richmond", ja: "リッチモンドの投票所への行きやすさ" },
@@ -46,6 +50,7 @@ const projects = [
   {
     id: "redlined-chicago",
     year: "2025",
+    tools: ["R", "QGIS", "QuickOSM"],
     thumb: "redlined-chicago.webp",
     title:    { en: "Redlined Chicago", ja: "レッドライニングのシカゴ" },
     subtitle: { en: "Critical Geographical Analysis of the City", ja: "批判地理学から見る都市" },
@@ -54,6 +59,7 @@ const projects = [
   {
     id: "mapping-the-gaps",
     year: "2025",
+    tools: ["QGIS", "OpenStreetMap"],
     thumb: "mapping-the-gaps.webp",
     title:    { en: "Campus Tactile Paving", ja: "キャンパスの点字ブロック" },
     subtitle: { en: "Pedestrian Accessibility and Safety", ja: "歩く人のアクセシビリティと安全" },
@@ -62,6 +68,7 @@ const projects = [
   {
     id: "lines-of-power",
     year: "2025",
+    tools: ["Excel", "QGIS"],
     thumb: "lines-of-power.webp",
     title:    { en: "Partisan Gerrymandering", ja: "党派的ゲリマンダー" },
     subtitle: { en: "Congressional Redistricting in California", ja: "カリフォルニア州の下院選挙区割り" },
@@ -70,6 +77,7 @@ const projects = [
   {
     id: "downtown-derby",
     year: "2025",
+    tools: ["Social Explorer", "OpenStreetMap"],
     thumb: "downtown-derby.webp",
     title:    { en: "Downtown Louisville", ja: "ルイビルのダウンタウン" },
     subtitle: { en: "Urban Geography Through Field Observation", ja: "現地観察から見る都市地理" },
@@ -78,6 +86,7 @@ const projects = [
   {
     id: "mapping-housing-potential",
     year: "2025",
+    tools: ["QGIS", "Adobe Illustrator"],
     thumb: "mapping-housing-potential.webp",
     title:    { en: "Mapping Housing Potential", ja: "住宅の可能性を地図にする" },
     subtitle: { en: "Tackling Addison County’s Housing Crisis", ja: "アディソン郡の住宅不足に向き合う" },
@@ -86,6 +95,7 @@ const projects = [
   {
     id: "green-spaces-by-the-border",
     year: "2025",
+    tools: ["QGIS", "Adobe Illustrator"],
     thumb: "green-spaces-by-the-border.webp",
     title:    { en: "Green Spaces by the Border", ja: "州境に広がる緑" },
     subtitle: { en: "Land Development in Pownal, VT", ja: "バーモント州ポーナルの土地開発" },
@@ -94,6 +104,7 @@ const projects = [
   {
     id: "map-design",
     year: "2025",
+    tools: ["Adobe Illustrator"],
     thumb: "map-design.webp",
     title:    { en: "Cartographic Studies", ja: "地図表現の練習" },
     subtitle: { en: "Symbolization and Typography", ja: "記号と文字" },
