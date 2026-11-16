@@ -16,6 +16,7 @@ js/project.js          builds a project page from its file in projects/
 projects/<id>.js       one file per project, with English and Japanese side by side
 images/thumbs/         homepage thumbnails, 1200 × 900 (4:3)
 images/projects/       full maps and process images
+favicon.ico, favicon-32.png, apple-touch-icon.png   the tab icon (my stamp), linked in every page's <head>
 ```
 
 ## Change a project's writing or images
