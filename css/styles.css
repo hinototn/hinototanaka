@@ -88,10 +88,10 @@ h1 { font-size: clamp(27px, 3.2vw, 34px); letter-spacing: -.02em; line-height: 1
 .project:hover h3 { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
 .project-subtitle { font-size: 14px; line-height: 1.4; margin: 4px 0 0; text-wrap: balance; }
 /* Year, then small outlined tags for the tools I used. */
-.project-tags { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 6px; margin: 9px 0 0; font-size: 12px; line-height: 1; }
-.project-year { color: var(--muted); margin-right: 4px; }
-.tag { padding: 4px 8px; border: 1px solid var(--line); border-radius: 999px; color: var(--muted); white-space: nowrap; }
-.project:hover .tag { border-color: var(--accent); color: var(--accent); }
+.project-tags { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 5px; margin: 8px 0 0; font-size: 11px; line-height: 1; }
+/* Kept light on purpose: the title and subtitle come first, these are just a quiet note. */
+.project-year { color: #8a8a8a; margin-right: 3px; }
+.tag { padding: 3px 7px; border: 1px solid #ebe8e4; border-radius: 999px; color: #8a8a8a; white-space: nowrap; }
 :lang(ja) .project-subtitle, :lang(ja) .project h3 { word-break: auto-phrase; }
 
 /* ---------- Project pages ---------- */
