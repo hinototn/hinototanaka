@@ -60,10 +60,6 @@ img { max-width: 100%; height: auto; display: block; }
 .lang-switch a { color: var(--muted); text-decoration: none; padding-bottom: 2px; border-bottom: 1px solid transparent; }
 .lang-switch a[aria-current="page"], .lang-switch a:hover { color: var(--accent); border-bottom-color: var(--accent); }
 .lang-divider { color: #999; }
-/* Space between the About link and the language toggle. */
-.nav-gap { width: 14px; }
-.lang-switch .nav-about { color: var(--ink); }
-.lang-switch .nav-about[aria-current="page"], .lang-switch .nav-about:hover { color: var(--accent); }
 
 /* ---------- Homepage ---------- */
 h1 { font-size: clamp(27px, 3.2vw, 34px); letter-spacing: -.02em; line-height: 1.2; }
