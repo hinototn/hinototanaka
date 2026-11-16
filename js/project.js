@@ -67,7 +67,7 @@ function project(p) {
   document.querySelector('meta[name="description"]').content = p.intro[lang];
 
   main.innerHTML = `
-    <p class="back"><a href="index.html#work">← ${lang === 'ja' ? '作品一覧へ' : 'Work'}</a></p>
+    <p class="back"><a href="./#work">← ${lang === 'ja' ? '作品一覧へ' : 'Work'}</a></p>
     <h1>${info.title[lang]}</h1>
     <p class="project-intro">${p.intro[lang]}</p>
     ${hero(p.hero)}
@@ -81,7 +81,7 @@ function project(p) {
       ${p.sources.length ? `<section class="sources"><h2>${words[lang].sources}</h2>
         <ul>${p.sources.map((s) => `<li>${s[lang]}</li>`).join('')}</ul></section>` : ''}
     </div>
-    <p class="back bottom-back"><a href="index.html#work">← ${lang === 'ja' ? '作品一覧へ' : 'Back to work'}</a></p>`;
+    <p class="back bottom-back"><a href="./#work">← ${lang === 'ja' ? '作品一覧へ' : 'Back to work'}</a></p>`;
 
   // The hero switch buttons: show the chosen version, hide the other.
   main.querySelectorAll('.hero-switch button').forEach((b) => b.addEventListener('click', () => {
@@ -91,7 +91,7 @@ function project(p) {
 }
 
 // Point the EN / 日本語 toggle at the same project in the other language.
-document.querySelectorAll('.lang-switch a').forEach((a) => { a.href += `?id=${id}`; });
+document.querySelectorAll('.lang-switch a[hreflang]').forEach((a) => { a.href += `?id=${id}`; });
 
 // Load this project's content file (or say it doesn't exist).
 if (info) {
@@ -99,5 +99,5 @@ if (info) {
   script.src = `${root}projects/${id}.js`;
   document.body.appendChild(script);
 } else {
-  main.innerHTML = `<p class="project-intro">${words[lang].notFound} <a href="index.html">←</a></p>`;
+  main.innerHTML = `<p class="project-intro">${words[lang].notFound} <a href="./">←</a></p>`;
 }
