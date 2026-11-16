@@ -49,3 +49,6 @@ My name, stamp and the EN / 日本語 toggle are written in each page's `<header
 ## If something breaks
 - Blank project page: a missing comma or quote in `projects/<id>.js`, or the `id` in `js/projects.js` doesn't match the file name.
 - Broken image: check the file name and its capitalization.
+
+## If my changes don't show up
+Browsers keep a saved copy of the CSS and JavaScript files. Each page loads them with a date on the end (e.g. `js/projects.js?v=2026-11-16`). After I change anything in `css/`, `js/` or `projects/`, I change that date to today in all six HTML pages and in `js/project.js` (search for `?v=`), and visitors get the new version right away. To check my own changes, a hard refresh also works: Cmd+Shift+R (Mac) or Ctrl+Shift+R (Windows).
