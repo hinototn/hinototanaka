@@ -28,6 +28,8 @@ Open `projects/<id>.js`. Every piece of text has an `en:` and a `ja:` version ne
 - `sections`: each has a `heading`, `text` (a list of paragraphs) and optional `images`
 - `sources`
 
+The small tool tags on homepage cards come from `tools:` in `js/projects.js` (separate from the Tools line on the project page).
+
 Images in a section stay small on purpose: one is centered, two sit side by side, three or more make a grid.
 
 ## Reorder projects, or change a title, subtitle or thumbnail
@@ -44,7 +46,7 @@ The project's address is `project.html?id=my-new-map`.
 At the top of `css/styles.css`. English uses Helvetica Neue; Japanese uses Noto Sans JP, loaded in each page's `<head>`.
 
 ## The header
-My name, stamp and the EN / 日本語 toggle are written in each page's `<header>` (index, project, about, in both languages). My name links to the homepage (`./`, so the address doesn't show index.html). My stamp is the only way to my About page, on purpose: a small hidden find. If I change the header, I change all six.
+My name, stamp and the ABOUT | EN / 日本語 row are written in each page's `<header>` (index, project, about, in both languages). My name links to the homepage (`./`, so the address doesn't show index.html). Both the ABOUT link and my stamp go to my About page. If I change the header, I change all six.
 
 ## If something breaks
 - Blank project page: a missing comma or quote in `projects/<id>.js`, or the `id` in `js/projects.js` doesn't match the file name.

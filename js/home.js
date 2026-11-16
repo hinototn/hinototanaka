@@ -9,7 +9,7 @@
 const lang = document.documentElement.lang === 'ja' ? 'ja' : 'en';
 const root = lang === 'ja' ? '../' : '';   // the Japanese pages live one folder down
 
-// One card: thumbnail, title, subtitle, year.
+// One card: thumbnail, title, subtitle, then the year and tool tags on one line.
 const card = (p) => `
   <a class="project" href="project.html?id=${p.id}">
     <div class="project-image">
@@ -17,7 +17,7 @@ const card = (p) => `
     </div>
     <h3>${p.title[lang]}</h3>
     <p class="project-subtitle">${p.subtitle[lang]}</p>
-    <p class="project-year">${p.year}</p>
+    <p class="project-tags"><span class="project-year">${p.year}</span>${(p.tools || []).map((t) => `<span class="tag">${t}</span>`).join('')}</p>
   </a>`;
 
 const selected = projects.filter((p) => p.selected);
