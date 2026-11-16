@@ -9,12 +9,14 @@ const root = lang === 'ja' ? '../' : '';   // the Japanese pages live one folder
 const id = new URLSearchParams(location.search).get('id');
 const info = projects.find((p) => p.id === id);
 const main = document.getElementById('project');
+// The ?v=… date on this script's own address (set in project.html), reused for the content file below.
+const version = new URL(document.currentScript.src).search;
 
 // The few words the template itself needs, in both languages.
 const words = {
-  en: { sources: 'Sources', notFound: 'Project not found.', open: 'Click to open full size.' },
-  ja: { sources: '出典', notFound: '作品が見つからない。', open: 'クリックすると原寸で開く。' },
-};
+  en: { back: 'Work', backBottom: 'Back to work', process: 'Process', sources: 'Sources', notFound: 'Project not found.', open: 'Click to open full size.' },
+  ja: { back: '作品一覧へ', backBottom: '作品一覧へ', process: '制作の流れ', sources: '出典', notFound: '作品が見つからない。', open: 'クリックすると原寸で開く。' },
+}[lang];
 
 // One image that opens full size when clicked.
 function image(img) {
@@ -57,7 +59,7 @@ function hero(h) {
   return `${buttons}${versions.map((v, i) => `
     <figure class="hero" data-version="${i}" ${i ? 'hidden' : ''} ${v.width ? `style="max-width:${v.width}px"` : ''}>
       <a href="${root}images/projects/${v.file}" target="_blank" rel="noopener"><img src="${root}images/projects/${v.file}" alt="${v.alt[lang]}"></a>
-      <figcaption>${v.caption[lang]} ${words[lang].open}</figcaption>
+      <figcaption>${v.caption[lang]} ${words.open}</figcaption>
     </figure>`).join('')}`;
 }
 
@@ -67,21 +69,21 @@ function project(p) {
   document.querySelector('meta[name="description"]').content = p.intro[lang];
 
   main.innerHTML = `
-    <p class="back"><a href="./#work">← ${lang === 'ja' ? '作品一覧へ' : 'Work'}</a></p>
+    <p class="back"><a href="./#work">← ${words.back}</a></p>
     <h1>${info.title[lang]}</h1>
     <p class="project-intro">${p.intro[lang]}</p>
     ${hero(p.hero)}
     <div class="prose">
       <dl class="facts">
         ${p.facts.map((f) => `<dt>${f.label[lang]}</dt><dd>${f.text[lang]}</dd>`).join('')}
-        ${p.workflow ? `<dt>${lang === 'ja' ? '制作の流れ' : 'Process'}</dt><dd>${p.workflow.map((w) => w[lang]).join(' → ')}</dd>` : ''}
+        ${p.workflow ? `<dt>${words.process}</dt><dd>${p.workflow.map((w) => w[lang]).join(' → ')}</dd>` : ''}
       </dl>
       ${p.about ? p.about[lang].map((t) => `<p>${t}</p>`).join('') : ''}
       ${p.sections.map(section).join('')}
-      ${p.sources.length ? `<section class="sources"><h2>${words[lang].sources}</h2>
+      ${p.sources.length ? `<section class="sources"><h2>${words.sources}</h2>
         <ul>${p.sources.map((s) => `<li>${s[lang]}</li>`).join('')}</ul></section>` : ''}
     </div>
-    <p class="back bottom-back"><a href="./#work">← ${lang === 'ja' ? '作品一覧へ' : 'Back to work'}</a></p>`;
+    <p class="back bottom-back"><a href="./#work">← ${words.backBottom}</a></p>`;
 
   // The hero switch buttons: show the chosen version, hide the other.
   main.querySelectorAll('.hero-switch button').forEach((b) => b.addEventListener('click', () => {
@@ -96,8 +98,8 @@ document.querySelectorAll('.lang-switch a[hreflang]').forEach((a) => { a.href +=
 // Load this project's content file (or say it doesn't exist).
 if (info) {
   const script = document.createElement('script');
-  script.src = `${root}projects/${id}.js?v=2026-11-16d`;   // update this date after editing project files, so browsers load the new version
+  script.src = `${root}projects/${id}.js${version}`;
   document.body.appendChild(script);
 } else {
-  main.innerHTML = `<p class="project-intro">${words[lang].notFound} <a href="./">←</a></p>`;
+  main.innerHTML = `<p class="project-intro">${words.notFound} <a href="./">←</a></p>`;
 }
