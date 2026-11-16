@@ -5,7 +5,8 @@
 //
 // Each project has:
 //   id        – the name of its content file in projects/ (projects/<id>.js)
-//   year      – kept for my records (not shown on the site)
+//   year      – shown under the subtitle; "More work" is sorted by it, newest first
+//   selected  – true puts the project in the "Selected work" row at the top (I keep it to three)
 //   thumb     – the 4:3 homepage thumbnail in images/thumbs/ (1200 × 900)
 //   title, subtitle, thumbAlt – English and Japanese side by side
 //
@@ -14,6 +15,7 @@
 const projects = [
   {
     id: "okinawa-twice-colonized",
+    selected: true,
     year: "2025",
     thumb: "okinawa-twice-colonized.webp",
     title:    { en: "Okinawa, Twice Colonized", ja: "沖縄・支配下に置かれている島" },
@@ -22,6 +24,7 @@ const projects = [
   },
   {
     id: "the-danish-kollektiv",
+    selected: true,
     year: "2026",
     thumb: "the-danish-kollektiv.webp",
     title:    { en: "The Danish Kollektiv", ja: "デンマークのコレクティブ" },
@@ -38,6 +41,7 @@ const projects = [
   },
   {
     id: "re-drawing-voting-access",
+    selected: true,
     year: "2025",
     thumb: "re-drawing-voting-access.webp",
     title:    { en: "Re-Drawing Voting Access", ja: "投票所への道を引き直す" },

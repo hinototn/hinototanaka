@@ -20,10 +20,13 @@
 </header>
 <main class="container home-main" id="main">
 <section class="intro"><p>こんにちは。ミドルベリー大学で地理学を学んでいて、地図づくり、GIS、空間分析に取り組んでいる。視覚的に物語を伝えることなら何でも興味があり、とくに地理の調査とデザインが重なるところにひかれる。連絡は <a class="contact-link" href="https://www.linkedin.com/in/hinoto-tanaka/" rel="noopener noreferrer" target="_blank">LinkedIn</a> か <a class="contact-link" href="mailto:hinoto.max.tanaka@gmail.com">メール</a> から気軽にどうぞ。</p></section>
-<section class="work" id="work" aria-labelledby="work-heading">
-<!-- js/home.js fills this grid from my list in js/projects.js. -->
-<h2 id="work-heading">作品</h2>
-<div class="project-grid" id="project-grid"></div>
+<section class="work" id="work">
+<!-- js/home.js fills both grids from my list in js/projects.js:
+     projects marked selected: true go in the first grid, the rest go below, newest first. -->
+<h2 id="selected-heading">主な作品</h2>
+<div class="project-grid" id="selected-grid" aria-labelledby="selected-heading"></div>
+<h2 id="more-heading">そのほかの作品</h2>
+<div class="project-grid" id="more-grid" aria-labelledby="more-heading"></div>
 </section>
 </main>
 <footer class="site-footer" id="contact"><div class="container footer-inner">
